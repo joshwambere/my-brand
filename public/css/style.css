@@ -14,7 +14,7 @@
     min-height: 55px;
     box-shadow: 7px 2px 17px 6px #f4f4f4;
     padding-left: 2%;
-    padding-right:2% ;
+   
 }
 .jd-nav{
     display: flex;
@@ -122,7 +122,7 @@
        
         display: none;
         margin-left: auto;
-        margin-right: ;
+    
     }
     .jd-ul{
         display: grid;
@@ -140,6 +140,7 @@
     justify-content: center;
     padding-top: 9%; 
 }
+
 /*user info start here*/
 
 .jd-img-sect{
@@ -272,4 +273,271 @@
         margin-left: auto;
 
     }
+}
+
+/*personal info*/
+.jd-intro{
+    color: #fff;
+    padding-top: 5%;
+}
+.jd-info-container{
+    background-color: black;
+    opacity: .8;
+    min-height: 460px;
+    display: flex;
+    align-content: center;
+}
+.jd-info{
+    padding-left: 5%;
+    padding-top: 7%;
+    padding-bottom: 1%;
+    padding-right: 2%;
+    display: flex;
+    flex-direction: column;
+    width: 62%;
+}
+.jd-info h3{
+   padding-bottom: 3%;
+   font-size: 19px;
+   font-weight: 100;
+}
+.jd-info h4{
+    padding-bottom: 3%;
+    font-size: 29px;
+    font-weight: 300;
+    width: 60%;
+ }
+ .jd-info p{
+    padding-bottom: 3%;
+    font-size: 18px;
+    font-weight: 100;
+     width: 70%;
+     color:#fff;
+ }
+
+ .jd-perso-info{
+    padding-top: 35%;
+ }
+ .jd-perso-info label{
+    color: #37BE9E;
+    font-size: 19px;
+    display: inline-flex;
+ }
+ .jd-perso-info  ul li{
+     list-style: none;
+     padding-bottom: 3%;
+ }
+ .lbl{
+     margin-right: 12px;
+     width: 110px;
+     
+     justify-content: space-between;
+ }
+
+ @media screen and (max-width: 768px) {
+    .jd-info-container{
+        background-color: black;
+        opacity: .8;
+        min-height: 460px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+    }
+    .jd-info{
+        padding-left: 4%;
+        padding-top: 3%;
+        padding-bottom: 1%;
+        padding-right: 2%;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .jd-perso-info{
+        padding-top: 12%;
+        padding-left: 4%;
+     }
+}
+
+/*skills*/
+@media screen and (min-width: 768px) {
+    .jd-skillsy{
+
+   
+        padding-top: 2%!important;
+        display: flex;
+        width: 100%;
+    
+    }
+}
+
+.jd-skills{
+   padding: 4%;
+
+}
+.js-skill-title{
+    margin-left: auto;
+    margin-right: auto;
+    width: 45%;
+    text-align: center;
+    color: #37BE9E;
+    font-style: bold;
+    font-size: 30px;
+    
+}
+.js-skill-title span{
+    border-right: 3px solid #37BE9E;
+    border-radius: 1px;
+    margin-right: 5px;
+}
+
+.jd-skills-box{
+    width: 100%;
+    min-height: 200px;
+    border: 2px solid rgba(0, 0, 0, 0.125);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1%;
+    background: #ffff!important;
+    color: #000;
+    
+}
+.jd-skills-box img{
+    width: 100px;
+    height: 100px;
+}
+.jd-tech-name{
+    font-weight: 100;
+    padding-top: 3%;
+    opacity: .8;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 17;
+} 
+
+/*projects start here*/
+
+.jd-project-cont{
+    padding-right: 4%;
+    padding-left: 4%;
+   
+}
+.proj-card{
+    border: 2px solid rgba(0, 0, 0, 0.125);
+    width: 33.99%;
+    padding:3%;
+    border-radius: 5px;
+}
+.image{
+    display: flex;
+}
+.rev{
+    width: 100%;
+}
+.desc{
+    padding-top: 3%;
+
+}
+.desc p{
+    font-weight: lighter;
+    font-size: 16px;
+}
+.links{
+    padding-top: 8%;;
+}
+.links button{
+    width: 90px;
+    height: 30px;
+    background: #37BE9E;
+    border: none;
+    border-radius: 10px;
+}
+.links a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+}
+@media screen and (max-width: 768px) {
+    .proj-card{
+        border: 2px solid rgba(0, 0, 0, 0.125);
+        width: 100%;
+        padding:3%;
+        border-radius: 5px;
+    }
+}
+
+/*services*/
+.jd-services{
+    padding: 4%;
+}
+.services-Icons{
+    color: #37BE9E!important;
+    font-size: 40px;
+}
+
+
+/*EXPERIENCE*/
+.dates{
+    float: right!important;
+    margin-left: auto;
+    padding-bottom: 1%;
+    padding-right: 1%;
+
+}
+.company{
+    float: right!important;
+    margin-right: auto;
+    padding-bottom: 9%;
+    padding-left: 3%;
+} 
+
+
+/* contacts*/
+
+@media screen and (min-width: 768px) {
+    .contacts-box{
+
+   
+        padding-top: 2%!important;
+        display: flex;
+        width: 100%;
+    
+    }
+}
+.icons{
+    color: #37BE9E;
+    padding-bottom: 2%;
+    font: 24px;
+}
+.love{
+    color:orangered;
+    font-size: 15px;
+}
+.credits{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-top: 3px solid #f4f4f4;
+    padding-bottom: 2%;
+}
+.footer-social-links{
+    float:right!important;
+    display: flex;
+    padding-left: 2%;
+}
+.footer-social-links li{
+    list-style: none;
+    margin-left: 12%;
+    padding-top: 1%;
+}
+.social-icons{
+    font-size: 22px;
+    color: #37BE9E;
+}
+.social-icons:hover{
+    cursor: pointer;
+    color: #37BE9E;
+    text-decoration: none;
 }
