@@ -5,19 +5,31 @@
 /*Nav bar start here*/
 .jd-site{
     background: #fff;
-    min-height: 100vh;
+    min-height: 140vh;
     width: 100%;
     font-family: 'Ubuntu Mono', monospace;
+    margin-top:0px!important;
+    overflow-x: hidden;
+   
 }
 .js-header{
     background:#fff ;
     min-height: 55px;
     box-shadow: 7px 2px 17px 6px #f4f4f4;
-    padding-left: 2%;
+    width: 100%;
+    right:0;
    
 }
+.jd-landing-sect{
+    display: flex;
+    flex-flow: column;
+    
+}
+
+
 .jd-nav{
     display: flex;
+    padding-left: 3%;
 }
 .jd-nav-menu{
     margin-left: auto;
@@ -116,7 +128,10 @@
 @media screen and (max-width: 992px) {
     
     .jd-nav-menu  {
-        display: none;
+        transition: opacity 1s ease-out;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
     }
     .jd-log-container{
        
@@ -131,39 +146,46 @@
         
     }
 }
-.jdNavMenuHumburger{
+.jd-nav-menu.active{
     background-color: #fff;
     width: 100%;
-    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     padding-top: 9%; 
+    opacity: 1;
+    height: auto;
 }
 
 /*user info start here*/
 
 .jd-img-sect{
-    padding-left: 10%;
-    padding-top: 6%;
+    padding-left: 5%;
+    padding-top: 2%;
     display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 .jd-owner-img{
-    width: 35%;
-    height: 35%;
+    width: 42%;
+    height: 86%;
     border-radius: 50%;
+}
+#landing{
+    
+    min-height:100vh;
 }
 .jd-greeting{
     background: #fff;
     border: 7px #37BE9E solid;
     border-radius: 150px;
-    width: 49%;
-    height: 40%;
-    margin-top: 10%;
+    width: 50%;
+    height: 30%;
+    margin-top: 13%;
     margin-left: -4%;
 }
 .jd-greetings-h3{
-    font-size: 42px;
+    font-size: 45px;
     padding: 6%;
 }
 @media screen and (max-width: 1239px) and (min-width: 967px) {
@@ -171,6 +193,10 @@
         width: 44%;
         height: 44%;
         border-radius: 50%;
+    }
+
+    #landing{
+        min-height: 100vh;
     }
     .jd-greeting{
         background: #fff;
@@ -187,6 +213,10 @@
     }
 }
 @media screen and (max-width: 967px) and (min-width: 720px) {
+     #landing{
+    
+        min-height:100vh;;
+    }
     .jd-owner-img{
         width: 48%;
         height: 48%;
@@ -205,14 +235,19 @@
         font-size: 24px;
         padding: 7%;
     }
+    
 }
 @media screen and (max-width: 719px) {
+    #landing{
+    
+        min-height:100vh;
+    }
     .jd-img-sect{
-        padding-left: 10%;
+        padding-left: 2%;
         padding-top: 6%;
         display: flex;
         flex-direction: column;
-        width: 80%;
+        width: 100%;
         align-items: center;
         text-align: center;
         justify-content: center;
@@ -239,14 +274,20 @@
         margin-left: auto;
 
     }
+   
+    
 }
 @media screen and (max-width: 420px) {
+    #landing{
+    
+        min-height:100vh;
+    }
     .jd-img-sect{
-        padding-left: 10%;
-        padding-top: 6%;
+        padding-left: 2%;
+        padding-top: 2%;
         display: flex;
         flex-direction: column;
-        width: 80%;
+        width: 100%;
         align-items: center;
         text-align: center;
         justify-content: center;
@@ -273,6 +314,7 @@
         margin-left: auto;
 
     }
+    
 }
 
 /*personal info*/
@@ -338,34 +380,63 @@
     .jd-info-container{
         background-color: black;
         opacity: .8;
-        min-height: 460px;
+        min-height: 480px;
         display: flex;
         flex-direction: column;
         align-content: center;
+        padding: 3%;
     }
     .jd-info{
-        padding-left: 4%;
+        
         padding-top: 3%;
         padding-bottom: 1%;
-        padding-right: 2%;
         display: flex;
         flex-direction: column;
         width: 100%;
+        align-items: center;
     }
     .jd-perso-info{
         padding-top: 12%;
         padding-left: 4%;
      }
+     .jd-info h3{
+        padding-bottom: 10%;
+        padding-top: 3%;
+     }
+     .jd-info h4{
+         padding-top: 3%;
+         padding-bottom: 6%;
+         width: 100%;
+        }
+      .jd-info p{
+         padding-top: 3%;
+         padding-bottom: 3%;
+         width: 98%;
+         padding-right: 7%;
+        
+      }
+      .jd-perso-info-cont{
+          padding-bottom: 5%;
+      }
 }
 
 /*skills*/
 @media screen and (min-width: 768px) {
     .jd-skillsy{
-
-   
         padding-top: 2%!important;
         display: flex;
         width: 100%;
+        align-items: center;
+    
+    }
+}
+@media screen and (max-width: 768px) {
+    .jd-skillsy{
+        padding-top: 2%!important;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
     
     }
 }
@@ -417,17 +488,24 @@
 } 
 
 /*projects start here*/
-
-.jd-project-cont{
-    padding-right: 4%;
-    padding-left: 4%;
-   
+@media screen and (min-width: 768px) {
+    .jd-project-cont{
+        padding-top: 2%!important;
+        display: flex;
+        width: 100%;
+    
+    }
 }
+.jd-projects{
+    padding: 4%;
+}
+
 .proj-card{
     border: 2px solid rgba(0, 0, 0, 0.125);
     width: 33.99%;
     padding:3%;
     border-radius: 5px;
+    margin: 1%;
 }
 .image{
     display: flex;
@@ -461,9 +539,16 @@
 @media screen and (max-width: 768px) {
     .proj-card{
         border: 2px solid rgba(0, 0, 0, 0.125);
-        width: 100%;
+        width: 97%;
         padding:3%;
         border-radius: 5px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .jd-project-cont{
+        padding-right: 8%;
+        padding-left: 4%;
+       
     }
 }
 
@@ -497,13 +582,46 @@
 
 @media screen and (min-width: 768px) {
     .contacts-box{
-
-   
         padding-top: 2%!important;
         display: flex;
         width: 100%;
     
     }
+   
+}
+@media screen and (max-width: 768px) {
+    .contacts-box{
+        padding-top: 2%!important;
+        display: flex;
+        width: 100%;
+    
+    }
+    .jd-contacts-cont{
+        padding: 4%;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    .footer-social-links li{
+        list-style: none;
+        margin-left: 0%;
+        padding-top: 1%;
+    }
+    .credits{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-top: 3px solid #f4f4f4;
+        padding-bottom: 2%;
+    }
+}
+.jd-contacts-cont{
+    padding: 4%;
+    display: flex;
+    width: 100%;
 }
 .icons{
     color: #37BE9E;
