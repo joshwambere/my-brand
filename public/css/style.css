@@ -184,6 +184,7 @@
     z-index: 2000;
     vertical-align: top;
     margin-left: -3%;
+    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
 }
 
 /*user info start here*/
@@ -855,7 +856,7 @@ Login page css starts here
     margin-left: auto;
     margin-right: auto;
     padding-top: 6%;
-
+    margin-top: 2%;
     box-shadow: 0 2px 4px 0 rgba(181,181,181,.7);
     padding: 3%;
     border-radius: 4px;
@@ -877,11 +878,80 @@ Login page css starts here
     margin-top: 3%;
 
 }
-.form lable{
-    
+.form label{
+    margin-top: 14%;;
 }
+
 .login-intro{
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+}
+.login-intro h3{
+    font-weight: 300;
+    font-size: 23px;
+    padding-bottom: 8%;
+}
+.login-intro span{
+    font-weight: 100;
+    font-size: 17px;
+    padding-bottom: 8%;
+}
+.sbt-btn{
+    margin-top: 14%;
+    height: 34px;
+    background: #37BE9E;
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    padding: 7px;
+    margin-bottom: 8%;
+}
+
+@media screen and (max-width:1230px) and (min-width:967px){
+    .form{
+        width: 70%;
+    }
+    .jd-form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 80%;
+    }
+}
+@media screen and (max-width:967px){
+    .form{
+        width: 70%;
+    }
+    .jd-form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 90%;
+    }
+}
+@media screen and (max-width:768px){
+    .form{
+        width: 85%;
+    }
+    .jd-form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 90%;
+        padding-top: 10%;
+    }
+}
+@media screen and (max-width:320px){
+    .form{
+        width: 98%;
+    }
+    .jd-form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 90%;
+    }
 }
