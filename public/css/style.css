@@ -188,6 +188,7 @@
     font-size: 45px;
     padding: 6%;
 }
+
 @media screen and (max-width: 1239px) and (min-width: 967px) {
     .jd-owner-img{
         width: 44%;
@@ -218,21 +219,21 @@
         min-height:100vh;;
     }
     .jd-owner-img{
-        width: 48%;
-        height: 48%;
+        width: 50%;
+        height: 50%;
         border-radius: 50%;
     }
     .jd-greeting{
         background: #fff;
         border: 7px #37BE9E solid;
         border-radius: 150px;
-        width: 46%;
+        width: 50%;
         height: 40%;
-        margin-top: 15%;
+        margin-top: 16%;
         margin-left: -6%;
     }
     .jd-greetings-h3{
-        font-size: 24px;
+        font-size: 26px;
         padding: 7%;
     }
     
@@ -253,22 +254,23 @@
         justify-content: center;
     }
     .jd-owner-img{
-        width: 53%;
-        height: 53%;
+        width: 83%;
+        height: 83%;
         border-radius: 50%;
+        padding-right: 3%;
         
     }
     .jd-greeting{
         background: #fff;
         border: 7px #37BE9E solid;
         border-radius: 150px;
-        width: 75%;
+        width: 80%;
         height: 30%;
         margin-top: 3%;
         
     }
     .jd-greetings-h3{
-        font-size: 24px;
+        font-size: 28px;
         padding: 7%;
         margin-right: auto;
         margin-left: auto;
@@ -291,25 +293,66 @@
         align-items: center;
         text-align: center;
         justify-content: center;
+        margin-bottom: 40%;
     }
     .jd-owner-img{
-        width: 63%;
-        height: 63%;
+        width: 90%;
+        height: 90%;
         border-radius: 50%;
+        padding-right: 3%;
+    }
+    .jd-greeting{
+        background: #fff;
+        border: 7px #37BE9E solid;
+        border-radius: 150px;
+        width: 96%;
+        height: 27%;
+        margin-top: 10%;
         
+        
+    }
+    .jd-greetings-h3{
+        font-size: 24px;
+        padding: 3%;
+        margin-right: auto;
+        margin-left: auto;
+
+    }
+    
+}
+@media screen and (max-width: 330px) {
+    #landing{
+    
+        min-height:100vh;
+    }
+    .jd-img-sect{
+        padding-left: 2%;
+        padding-top: 0%;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+    .jd-owner-img{
+        width: 85%;
+        height: 85%;
+        border-radius: 50%;
+        padding-right: 3%;
     }
     .jd-greeting{
         background: #fff;
         border: 7px #37BE9E solid;
         border-radius: 150px;
         width: 87%;
-        height: 30%;
+        height: 20%;
         margin-top: 3%;
         
     }
     .jd-greetings-h3{
-        font-size: 18px;
-        padding: 7%;
+        font-size: 15px;
+        padding: 5%;
         margin-right: auto;
         margin-left: auto;
 
@@ -448,7 +491,7 @@
 .js-skill-title{
     margin-left: auto;
     margin-right: auto;
-    width: 45%;
+    width: 51%;
     text-align: center;
     color: #37BE9E;
     font-style: bold;
@@ -484,7 +527,7 @@
     padding-top: 3%;
     opacity: .8;
     font-family: 'Ubuntu Mono', monospace;
-    font-size: 17;
+    font-size: 22;
 } 
 
 /*projects start here*/
@@ -610,12 +653,21 @@
     }
     .credits{
         display: flex;
+        min-height: 200px;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
         border-top: 3px solid #f4f4f4;
         padding-bottom: 2%;
+    }
+    
+}
+@media screen and (max-width:992px){
+    .btm-menu{
+        height: auto!important;
+        opacity: 1!important;
+
     }
 }
 .jd-contacts-cont{
@@ -659,3 +711,4 @@
     color: #37BE9E;
     text-decoration: none;
 }
+
