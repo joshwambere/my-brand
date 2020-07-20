@@ -831,3 +831,57 @@
     color: #37BE9E;
     text-decoration: none;
 }
+
+/*
+Login page css starts here
+===============================
+*/
+
+.Login-site{
+    min-height: 80vh;
+}
+.jd-form-sectioon{
+    min-height: 40vh;
+    padding-top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 6%;
+
+    box-shadow: 0 2px 4px 0 rgba(181,181,181,.7);
+    padding: 3%;
+    border-radius: 4px;
+    
+    
+}
+.jd-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+}
+.form input{
+    min-height: 30px;
+    border: 2px solid #37BE9E;
+    border-radius: 7px;
+    outline:none;
+    padding: 5px;
+    margin-top: 3%;
+
+}
+.form lable{
+    
+}
+.login-intro{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
