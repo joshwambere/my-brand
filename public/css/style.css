@@ -385,7 +385,7 @@
 
 }
 
-@media screen and (max-width: 330px) {
+@media screen and (max-width: 320px) {
     #landing {
 
         min-height: 100vh;
@@ -425,6 +425,12 @@
         margin-right: auto;
         margin-left: auto;
 
+    }
+    .jd-perso-info {
+        padding-left: 0%;
+    }
+    .jd-info-content{
+        font-size: 13px;
     }
 
 }
