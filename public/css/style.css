@@ -1004,3 +1004,342 @@ Login page css starts here
     border-radius: 7px;
 
 }
+
+/*
+blog css
+*/
+
+.jd-blog{
+    min-height: 100vh;
+}
+.jd-blog-cont{
+    margin-top: 5%;
+    padding: 1%;
+    width: 70%;
+    margin-left: auto;  
+    margin-right: auto;
+    padding-bottom: 3%;
+    
+}
+.jd-blog-card{
+    padding-right: 0%;
+    margin-top: 2%;
+    width: 60%;
+    padding-bottom: 1%;
+    border-bottom: 2px solid #37BE9E;
+    border-radius: 4px;
+    
+}
+.jd-blog-banner{
+    width: 100%;
+    min-height:300px;
+}
+.jd-blog-header{
+    width: 100%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.jd-blog-header h2{
+ font-size: 32px;;  
+}
+.jd-blog-content{
+    width: 100%;
+}
+
+.jd-blog-content p{
+    font-size: 18px;
+    opacity: .7;
+    padding-bottom: 2%;
+}
+.jd-blog-content a{
+    font-size: 15px;
+    opacity: .7;
+    color: #000;
+    
+}
+.blog-intro{
+    padding-bottom: 4%;
+}
+.blog-intro h3{
+    font-size: 30px;
+    color: #37BE9E;
+}
+.jd-blog-cont a{
+    text-decoration: none;
+    color: #000;
+}
+
+@media screen and (max-width:768px){
+    .jd-blog-cont{
+        margin-top: 5%;
+        padding: 1%;
+        width: 90%;
+        margin-left: auto;  
+        margin-right: auto;
+        padding-bottom: 4%;
+        
+    }
+    .jd-blog-card{
+        padding-right: 0%;
+        margin-top: 2%;
+        width: 100%;
+        padding-bottom: 1%;
+        border-bottom: 2px solid #37BE9E;
+        border-radius: 4px;
+        
+    }
+}
+@media screen and (max-width:420px){
+    .jd-blog-cont{
+        margin-top: 5%;
+        padding: 1%;
+        width: 90%;
+        margin-left: auto;  
+        margin-right: auto;
+        padding-bottom: 5%;
+        
+    }
+    .jd-blog-card{
+        padding-right: 0%;
+        margin-top: 4%;
+        width: 100%;
+        padding-bottom: 2%;
+        border-bottom: 2px solid #37BE9E;
+        border-radius: 4px;
+        
+    }
+    .jd-blog-banner{
+        width: 100%;
+        min-height:180px;
+    }
+    .jd-blog-header h2{
+        font-size: 28px !important; 
+    }
+}
+@media screen and (max-width:320px) {
+    .jd-blog-cont{
+        margin-top: 5%;
+        padding: 1%;
+        width: 98%;
+        margin-left: auto;  
+        margin-right: auto;
+        padding-bottom: 5%;
+        
+    }
+    .jd-blog-card{
+        padding-right: 0%;
+        margin-top: 4%;
+        width: 100%;
+        padding-bottom: 2%;
+        border-bottom: 2px solid #37BE9E;
+        border-radius: 4px;
+        
+    }
+    .jd-blog-banner{
+        width: 100%;
+        min-height:160px;
+    }
+    .jd-blog-header h2{
+        font-size: 23px !important; 
+    }
+}
+
+.pagination{
+    display: flex;
+    margin-top: 1%;
+    
+}
+
+.pagination li{
+   list-style: none;
+   padding: 1.2%;
+}
+.page-btn{
+    background: #ffffff;
+    color: #37BE9E;
+    padding: .7%;
+    border-radius: 5px;
+   
+}
+.page-btn a{
+   
+    text-align: center;   
+}
+.pg-icon{
+    
+    font-size: 25px;
+    color: #37BE9E !important;
+   
+}
+
+/*
+show css
+*/
+.show-content p{
+    font-size: 28px !important;
+    font-weight: 100;
+    line-height: 2.9rem;
+    opacity: .9;
+}
+.show-card{
+    padding-right: 0%;
+    margin-top: 4%;
+    width: 100%;
+    padding-bottom: 2%;
+    border-bottom: 2px solid #37BE9E;
+    border-radius: 4px;
+    
+}
+.title-show{
+    font-size: 38px !important;
+}
+
+.jd-blog-show-banner{
+    width: 100%;
+    min-height:520px;
+}
+.jd-blog-desc{
+    padding-bottom: 2%;
+}
+.jd-blog-desc p{
+    opacity: .6;
+}
+
+@media screen and (max-width:420px){
+    .jd-blog-cont{
+        margin-top: 5%;
+        padding: 1%;
+        width: 90%;
+        margin-left: auto;  
+        margin-right: auto;
+        padding-bottom: 5%;
+        
+    }
+    .show-card{
+        padding-right: 0%;
+        margin-top: 4%;
+        width: 100%;
+        padding-bottom: 2%;
+        border-bottom: 2px solid #37BE9E;
+        border-radius: 4px;
+        
+    }
+    .jd-blog-show-banner{
+        width: 100%;
+        min-height:180px;
+    }
+    .jd-blog-header h2{
+        font-size: 28px !important; 
+    }
+    .show-content p{
+        font-size: 20px !important;
+        font-weight: 100;
+        line-height: 2.9rem;
+        opacity: .9;
+    }
+}
+.jd-blog-comments{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    margin-bottom: 7%;
+}
+.jd-comment-intro{
+    display: flex;
+}
+.jd-comment-intro img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.jd-comment-intro p{
+    padding-top: 1%;
+    opacity: .7;
+}
+.jd-comment-cont{
+    display: flex;
+    flex-direction: column;
+}
+.jd-comment-cont input{
+    width: 46.4%;
+    justify-content: space-between;
+    min-height: 30px;
+    border:2px solid #37BE9E;
+    border-radius: 5px;
+    margin-top: 1%;
+    outline: none;
+    padding: .5%;
+}
+.jd-comment-cont textarea{
+    width: 94.2%;
+    border:2px solid #37BE9E;
+    border-radius: 5px;
+    margin-top: 1%;
+    outline: none;
+    padding: 1%;
+}
+.jd-comment-cont button{
+    background: #37BE9E;
+    color: #fff;
+    border: none;
+    height: 35px;
+    padding: .6%;
+    border-radius: 5px;
+    margin-top: 1%;
+    outline: none;
+}
+.jd-comment-cont button:hover{
+    cursor: pointer;
+}
+.intro-comment{
+    padding-left: 1%;
+}
+.intro-comment p{
+    opacity: .7;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-size: 15px;
+}
+.intro-comment h3{
+    text-transform: uppercase;
+}
+
+@media screen and (max-width:768px){
+    .jd-comment-cont input{
+        width: 98.4%;
+        justify-content: space-between;
+        min-height: 30px;
+        border:2px solid #37BE9E;
+        border-radius: 5px;
+        margin-top: 2%;
+        outline: none;
+        padding: .5%;
+    }
+    .jd-comment-cont button{
+        background: #37BE9E;
+        color: #fff;
+        border: none;
+        height: 39px;
+        padding: .6%;
+        border-radius: 5px;
+        margin-top: 2%;
+        outline: none;
+        width: 100%;
+    }
+    .jd-comment-cont textarea{
+        width: 98%;
+        border:2px solid #37BE9E;
+        border-radius: 5px;
+        margin-top: 1%;
+        outline: none;
+        padding: 1%;
+    }
+    .jd-blog-comments{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5%;
+        margin-bottom: 14%;
+    }
+}
