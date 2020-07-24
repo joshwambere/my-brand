@@ -1558,3 +1558,26 @@ addpost css
         width: 101%;
     }
 }
+
+/*
+showpostadmin
+*/
+.jd-post-controll{
+    margin-top: 3%;
+}
+.delete{
+    background: orangered;
+    padding: 1%;
+    color: #fff;
+    border-radius: 5px;
+}
+.edit{
+    background: #37BE9E;
+    color: #fff;
+    padding: 1%;
+    border-radius: 5px;
+}
+.deleteicon{
+font-size: 1.2em;
+padding-top: 2%;
+}
