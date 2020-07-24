@@ -1396,6 +1396,7 @@ show css
 }
 .jd-admin{
     width: 25%;
+    margin-top: 2%;
 }
 .contr button{
     background:#37BE9E;
@@ -1581,3 +1582,4 @@ showpostadmin
 font-size: 1.2em;
 padding-top: 2%;
 }
+
