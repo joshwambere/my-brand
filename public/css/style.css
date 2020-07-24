@@ -184,6 +184,7 @@
     z-index: 2000;
     vertical-align: top;
     margin-left: -3%;
+    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
 }
 
 /*user info start here*/
@@ -830,4 +831,176 @@
     cursor: pointer;
     color: #37BE9E;
     text-decoration: none;
+}
+
+/*
+Login page css starts here
+===============================
+*/
+
+.Login-site{
+    min-height: 80vh;
+}
+.jd-form-sectioon{
+    min-height: 40vh;
+    padding-top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 6%;
+    margin-top: 2%;
+    box-shadow: 0 2px 4px 0 rgba(181,181,181,.7);
+    padding: 3%;
+    border-radius: 4px;
+    
+    
+}
+.jd-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    padding-bottom: 5%;
+}
+.form input{
+    min-height: 30px;
+    border: 2px solid #37BE9E;
+    border-radius: 7px;
+    outline:none;
+    padding: 5px;
+    margin-top: 3%;
+
+}
+.form label{
+    margin-top: 14%;;
+}
+
+.login-intro{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.login-intro h3{
+    font-weight: 300;
+    font-size: 23px;
+    padding-bottom: 8%;
+}
+.login-intro span{
+    font-weight: 100;
+    font-size: 17px;
+    padding-bottom: 8%;
+}
+.sbt-btn{
+    margin-top: 14%;
+    height: 34px;
+    background: #37BE9E;
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    padding: 7px;
+    margin-bottom: 8%;
+}
+
+@media screen and (max-width:1230px) and (min-width:967px){
+    .form{
+        width: 70%;
+    }
+    .jd-form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 80%;
+        padding-bottom: 5%;
+    }
+}
+@media screen and (max-width:967px){
+    .form{
+        width: 70%;
+    }
+    .jd-form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 90%;
+        padding-bottom: 10%;
+    }
+}
+@media screen and (max-width:768px){
+    .form{
+        width: 85%;
+    }
+    .jd-form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 90%;
+        padding-top: 10%;
+        padding-bottom: 15%;
+    }
+}
+@media screen and (max-width:320px){
+    .form{
+        width: 98%;
+    }
+    .jd-form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 90%;
+    }
+}
+
+.jd-form.contacts-form{
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 90%;
+        padding-bottom: 5%;
+}
+.p-Info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+.p-Info input{
+    width: 46%;
+}
+@media screen and (max-width:768px){
+    .p-Info {
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .p-Info input{
+        width: 98%;
+    }
+}
+.form textarea{
+    min-height: 180px;
+    border-radius: 10px;
+    border: 2px solid #37BE9E;
+    margin-top: 2%;
+    padding: 3%;
+    margin-bottom: 2%;
+    outline: none;
+}
+.cont-btn{
+    background: #37BE9E;
+    border: none;
+    color: #fff;
+    min-width: 20%;
+    min-height: 35px;
+    border-radius: 7px;
+
 }
