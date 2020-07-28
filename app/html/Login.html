@@ -53,13 +53,15 @@
         <div class="jd-form-sectioon">
             <div class="jd-form">
                 <h2 class="js-skill-title"><span></span> Login</h2>
-                <form action="" class="form" name="myForm">
+                <form action="" class="form" name="myForm" id="myForm">
                     <div class="login-intro"><h3>Join Us</h3><span>Share your story to the world</span></div>
                     <label for="username">Username</label>
                     <input type="text" name="username" id="username" autocomplete="off">
+                    <p class="errors" id="UsernameError"></p>
                     <label class="lbl2" for="PWD">Password</label>
                     <input type="password" name="PWD" id="pwd" autocomplete="off">
-                    <button href="admin.html" class="sbt-btn" id="login" type="submit" name="sub"> <a href="admin.html">Login</a> </button>
+                    <p class="errors" id="PwdError"></p>
+                    <button href="admin.html" class="sbt-btn" id="login" type="submit" name="sub"> Login</button>
                     <p>dont have an account <a href="signup.html">register here</a></p>
                 </form>
             </div>

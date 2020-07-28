@@ -52,16 +52,18 @@
         <div class="jd-form-sectioon">
             <div class="jd-form">
                 <h2 class="js-skill-title"><span></span> REGISTER</h2>
-                <form action="" class="form">
+                <form action="" class="form" id="myForm">
                     <div class="login-intro"><h3>Join Us</h3><span>Share your story to the world</span></div>
                     <label for="name">name</label>
-                    <input type="text" name="name">
+                    <input type="text" name="name" required>
                     <label for="email">Email</label>
-                    <input type="email" name="email">
-                    <label for="username">Username</label>
-                    <input type="text" name="username">
-                    <label class="lbl2" for="PWD">Password</label>
-                    <input type="password" name="PWD" id="">
+                    <input type="email" name="email" required>
+                    <label for="username">password</label>
+                    <input type="text" name="password" id="pwd">
+                    <p class="errors" id="PwdError"></p>
+                    <label class="lbl2" for="PWD">Confirm Password</label>
+                    <input type="password" name="PWD" id="rePwd">
+                    <p class="errors" id="rePwdError"></p>
                     <button class="sbt-btn" type="submit" name="sub">register</button>
                     <p>Already have an account <a href="Login.html">SignIn here</a></p>
                 </form>

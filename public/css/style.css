@@ -1356,14 +1356,16 @@ show css
 @media screen and (max-width:809px){
     .jd-cont{
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         padding-top: 5%;
     } 
     .jd-admin{
-        width: 45% !important;
+        width: 75% !important;
         margin-right: auto;
         margin-left: auto;
         justify-content: center;
+        padding-top: 5%;
+        padding-bottom: 2%;
     }
 }
 .jd-blog-admin{
@@ -1377,10 +1379,13 @@ show css
 .jd-blog-card-admin{
     padding-right: 0%;
     margin-top: 2%;
-    width: 100%;
+    width: 90%;
     padding-bottom: 1%;
     border-bottom: 2px solid #37BE9E;
     border-radius: 4px;
+}
+.jd-blog-card-admin .jd-blog-banner{
+   min-height: 450px !important;
 }
 .jd-blog-cont-admin{
   
@@ -1583,3 +1588,7 @@ font-size: 1.2em;
 padding-top: 2%;
 }
 
+.errors{
+    color: orangered;
+    padding-top: 1%;
+}
