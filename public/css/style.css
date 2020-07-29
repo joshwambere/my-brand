@@ -369,6 +369,7 @@
         margin-left: auto;
 
     }
+
     .jd-nav-menu.active {
         background-color: #fff;
         width: 100%;
@@ -427,10 +428,12 @@
         margin-left: auto;
 
     }
+
     .jd-perso-info {
         padding-left: 0%;
     }
-    .jd-info-content{
+
+    .jd-info-content {
         font-size: 13px;
     }
 
@@ -838,10 +841,11 @@ Login page css starts here
 ===============================
 */
 
-.Login-site{
+.Login-site {
     min-height: 80vh;
 }
-.jd-form-sectioon{
+
+.jd-form-sectioon {
     min-height: 40vh;
     padding-top: 10%;
     display: flex;
@@ -849,7 +853,8 @@ Login page css starts here
     justify-content: center;
     align-items: center;
 }
-.form{
+
+.form {
     display: flex;
     flex-direction: column;
     width: 40%;
@@ -857,48 +862,55 @@ Login page css starts here
     margin-right: auto;
     padding-top: 6%;
     margin-top: 2%;
-    box-shadow: 0 2px 4px 0 rgba(181,181,181,.7);
+    box-shadow: 0 2px 4px 0 rgba(181, 181, 181, .7);
     padding: 3%;
     border-radius: 4px;
-    
-    
+
+
 }
-.jd-form{
+
+.jd-form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 70%;
     padding-bottom: 5%;
 }
-.form input{
+
+.form input {
     min-height: 30px;
     border: 2px solid #37BE9E;
     border-radius: 7px;
-    outline:none;
+    outline: none;
     padding: 5px;
     margin-top: 3%;
 
 }
-.form label{
-    margin-top: 14%;;
+
+.form label {
+    margin-top: 14%;
+    ;
 }
 
-.login-intro{
+.login-intro {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
 }
-.login-intro h3{
+
+.login-intro h3 {
     font-weight: 300;
     font-size: 23px;
     padding-bottom: 8%;
 }
-.login-intro span{
+
+.login-intro span {
     font-weight: 100;
     font-size: 17px;
     padding-bottom: 8%;
 }
-.sbt-btn{
+
+.sbt-btn {
     margin-top: 14%;
     height: 34px;
     background: #37BE9E;
@@ -911,11 +923,12 @@ Login page css starts here
     margin-bottom: 8%;
 }
 
-@media screen and (max-width:1230px) and (min-width:967px){
-    .form{
+@media screen and (max-width:1230px) and (min-width:967px) {
+    .form {
         width: 70%;
     }
-    .jd-form{
+
+    .jd-form {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -923,11 +936,13 @@ Login page css starts here
         padding-bottom: 5%;
     }
 }
-@media screen and (max-width:967px){
-    .form{
+
+@media screen and (max-width:967px) {
+    .form {
         width: 70%;
     }
-    .jd-form{
+
+    .jd-form {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -935,11 +950,13 @@ Login page css starts here
         padding-bottom: 10%;
     }
 }
-@media screen and (max-width:768px){
-    .form{
+
+@media screen and (max-width:768px) {
+    .form {
         width: 85%;
     }
-    .jd-form{
+
+    .jd-form {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -948,11 +965,13 @@ Login page css starts here
         padding-bottom: 15%;
     }
 }
-@media screen and (max-width:320px){
-    .form{
+
+@media screen and (max-width:320px) {
+    .form {
         width: 98%;
     }
-    .jd-form{
+
+    .jd-form {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -960,33 +979,38 @@ Login page css starts here
     }
 }
 
-.jd-form.contacts-form{
-    
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 90%;
-        padding-bottom: 5%;
+.jd-form.contacts-form {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    padding-bottom: 5%;
 }
+
 .p-Info {
     display: flex;
     flex-direction: row;
     justify-content: space-between
 }
-.p-Info input{
+
+.p-Info input {
     width: 46%;
 }
-@media screen and (max-width:768px){
+
+@media screen and (max-width:768px) {
     .p-Info {
         display: flex;
         flex-direction: column;
-        
+
     }
-    .p-Info input{
+
+    .p-Info input {
         width: 98%;
     }
 }
-.form textarea{
+
+.form textarea {
     min-height: 180px;
     border-radius: 10px;
     border: 2px solid #37BE9E;
@@ -995,7 +1019,8 @@ Login page css starts here
     margin-bottom: 2%;
     outline: none;
 }
-.cont-btn{
+
+.cont-btn {
     background: #37BE9E;
     border: none;
     color: #fff;
@@ -1009,277 +1034,316 @@ Login page css starts here
 blog css
 */
 
-.jd-blog{
+.jd-blog {
     min-height: 100vh;
 }
-.jd-blog-cont{
+
+.jd-blog-cont {
     margin-top: 5%;
     padding: 1%;
     width: 70%;
-    margin-left: auto;  
+    margin-left: auto;
     margin-right: auto;
     padding-bottom: 3%;
-    
+
 }
-.jd-blog-card{
+
+.jd-blog-card {
     padding-right: 0%;
     margin-top: 2%;
     width: 60%;
     padding-bottom: 1%;
     border-bottom: 2px solid #37BE9E;
     border-radius: 4px;
-    
+
 }
-.jd-blog-banner{
+
+.jd-blog-banner {
     width: 100%;
-    min-height:300px;
+    min-height: 300px;
 }
-.jd-blog-header{
+
+.jd-blog-header {
     width: 100%;
     padding-top: 2%;
     padding-bottom: 2%;
 }
-.jd-blog-header h2{
- font-size: 32px;;  
+
+.jd-blog-header h2 {
+    font-size: 32px;
+    ;
 }
-.jd-blog-content{
+
+.jd-blog-content {
     width: 100%;
 }
 
-.jd-blog-content p{
+.jd-blog-content p {
     font-size: 18px;
     opacity: .7;
     padding-bottom: 2%;
 }
-.jd-blog-content a{
+
+.jd-blog-content a {
     font-size: 15px;
     opacity: .7;
     color: #000;
-    
+
 }
-.blog-intro{
+
+.blog-intro {
     padding-bottom: 4%;
 }
-.blog-intro h3{
+
+.blog-intro h3 {
     font-size: 30px;
     color: #37BE9E;
 }
-.jd-blog-cont a{
+
+.jd-blog-cont a {
     text-decoration: none;
     color: #000;
 }
 
-@media screen and (max-width:768px){
-    .jd-blog-cont{
+@media screen and (max-width:768px) {
+    .jd-blog-cont {
         margin-top: 5%;
         padding: 1%;
         width: 90%;
-        margin-left: auto;  
+        margin-left: auto;
         margin-right: auto;
         padding-bottom: 4%;
-        
+
     }
-    .jd-blog-card{
+
+    .jd-blog-card {
         padding-right: 0%;
         margin-top: 2%;
         width: 100%;
         padding-bottom: 1%;
         border-bottom: 2px solid #37BE9E;
         border-radius: 4px;
-        
+
     }
 }
-@media screen and (max-width:420px){
-    .jd-blog-cont{
+
+@media screen and (max-width:420px) {
+    .jd-blog-cont {
         margin-top: 5%;
         padding: 1%;
         width: 90%;
-        margin-left: auto;  
+        margin-left: auto;
         margin-right: auto;
         padding-bottom: 5%;
-        
+
     }
-    .jd-blog-card{
+
+    .jd-blog-card {
         padding-right: 0%;
         margin-top: 4%;
         width: 100%;
         padding-bottom: 2%;
         border-bottom: 2px solid #37BE9E;
         border-radius: 4px;
-        
+
     }
-    .jd-blog-banner{
+
+    .jd-blog-banner {
         width: 100%;
-        min-height:180px;
+        min-height: 180px;
     }
-    .jd-blog-header h2{
-        font-size: 28px !important; 
+
+    .jd-blog-header h2 {
+        font-size: 28px !important;
     }
 }
+
 @media screen and (max-width:320px) {
-    .jd-blog-cont{
+    .jd-blog-cont {
         margin-top: 5%;
         padding: 1%;
         width: 98%;
-        margin-left: auto;  
+        margin-left: auto;
         margin-right: auto;
         padding-bottom: 5%;
-        
+
     }
-    .jd-blog-card{
+
+    .jd-blog-card {
         padding-right: 0%;
         margin-top: 4%;
         width: 100%;
         padding-bottom: 2%;
         border-bottom: 2px solid #37BE9E;
         border-radius: 4px;
-        
+
     }
-    .jd-blog-banner{
+
+    .jd-blog-banner {
         width: 100%;
-        min-height:160px;
+        min-height: 160px;
     }
-    .jd-blog-header h2{
-        font-size: 23px !important; 
+
+    .jd-blog-header h2 {
+        font-size: 23px !important;
     }
 }
 
-.pagination{
+.pagination {
     display: flex;
     margin-top: 1%;
-    
+
 }
 
-.pagination li{
-   list-style: none;
-   padding: 1.2%;
+.pagination li {
+    list-style: none;
+    padding: 1.2%;
 }
-.page-btn{
+
+.page-btn {
     background: #ffffff;
     color: #37BE9E;
     padding: .7%;
     border-radius: 5px;
-   
+
 }
-.page-btn a{
-   
-    text-align: center;   
+
+.page-btn a {
+
+    text-align: center;
 }
-.pg-icon{
-    
+
+.pg-icon {
+
     font-size: 25px;
     color: #37BE9E !important;
-   
+
 }
 
 /*
 show css
 */
-.show-content p{
+.show-content p {
     font-size: 28px !important;
     font-weight: 100;
     line-height: 2.6rem;
     opacity: .9;
 }
-.show-card{
+
+.show-card {
     padding-right: 0%;
     margin-top: 4%;
     width: 100%;
     padding-bottom: 2%;
     border-bottom: 2px solid #37BE9E;
     border-radius: 4px;
-    
+
 }
-.title-show{
+
+.title-show {
     font-size: 38px !important;
 }
 
-.jd-blog-show-banner{
+.jd-blog-show-banner {
     width: 100%;
-    min-height:520px;
+    min-height: 520px;
 }
-.jd-blog-desc{
+
+.jd-blog-desc {
     padding-bottom: 2%;
 }
-.jd-blog-desc p{
+
+.jd-blog-desc p {
     opacity: .6;
 }
 
-@media screen and (max-width:420px){
-    .jd-blog-cont{
+@media screen and (max-width:420px) {
+    .jd-blog-cont {
         margin-top: 5%;
         padding: 1%;
         width: 90%;
-        margin-left: auto;  
+        margin-left: auto;
         margin-right: auto;
         padding-bottom: 5%;
-        
+
     }
-    .show-card{
+
+    .show-card {
         padding-right: 0%;
         margin-top: 4%;
         width: 100%;
         padding-bottom: 2%;
         border-bottom: 2px solid #37BE9E;
         border-radius: 4px;
-        
+
     }
-    .jd-blog-show-banner{
+
+    .jd-blog-show-banner {
         width: 100%;
-        min-height:180px;
+        min-height: 180px;
     }
-    .jd-blog-header h2{
-        font-size: 28px !important; 
+
+    .jd-blog-header h2 {
+        font-size: 28px !important;
     }
-    .show-content p{
+
+    .show-content p {
         font-size: 20px !important;
         font-weight: 100;
         line-height: 2.9rem;
         opacity: .9;
     }
 }
-.jd-blog-comments{
+
+.jd-blog-comments {
     width: 70%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 5%;
     margin-bottom: 7%;
 }
-.jd-comment-intro{
+
+.jd-comment-intro {
     display: flex;
 }
-.jd-comment-intro img{
+
+.jd-comment-intro img {
     width: 60px;
     height: 60px;
     border-radius: 50%;
 }
-.jd-comment-intro p{
+
+.jd-comment-intro p {
     padding-top: 5%;
     opacity: .7;
 }
-.jd-comment-cont{
+
+.jd-comment-cont {
     display: flex;
     flex-direction: column;
 }
-.jd-comment-cont input{
+
+.jd-comment-cont input {
     width: 46.4%;
     justify-content: space-between;
     min-height: 30px;
-    border:2px solid #37BE9E;
+    border: 2px solid #37BE9E;
     border-radius: 5px;
     margin-top: 1%;
     outline: none;
     padding: .5%;
 }
-.jd-comment-cont textarea{
+
+.jd-comment-cont textarea {
     width: 94.2%;
-    border:2px solid #37BE9E;
+    border: 2px solid #37BE9E;
     border-radius: 5px;
     margin-top: 1%;
     outline: none;
     padding: 1%;
 }
-.jd-comment-cont button{
+
+.jd-comment-cont button {
     background: #37BE9E;
     color: #fff;
     border: none;
@@ -1289,34 +1353,39 @@ show css
     margin-top: 1%;
     outline: none;
 }
-.jd-comment-cont button:hover{
+
+.jd-comment-cont button:hover {
     cursor: pointer;
 }
-.intro-comment{
+
+.intro-comment {
     padding-left: 1%;
 }
-.intro-comment p{
+
+.intro-comment p {
     opacity: .7;
     padding-top: 1%;
     padding-bottom: 1%;
     font-size: 15px;
 }
-.intro-comment h3{
+
+.intro-comment h3 {
     text-transform: uppercase;
 }
 
-@media screen and (max-width:768px){
-    .jd-comment-cont input{
+@media screen and (max-width:768px) {
+    .jd-comment-cont input {
         width: 98.4%;
         justify-content: space-between;
         min-height: 30px;
-        border:2px solid #37BE9E;
+        border: 2px solid #37BE9E;
         border-radius: 5px;
         margin-top: 2%;
         outline: none;
         padding: .5%;
     }
-    .jd-comment-cont button{
+
+    .jd-comment-cont button {
         background: #37BE9E;
         color: #fff;
         border: none;
@@ -1327,15 +1396,17 @@ show css
         outline: none;
         width: 100%;
     }
-    .jd-comment-cont textarea{
+
+    .jd-comment-cont textarea {
         width: 98%;
-        border:2px solid #37BE9E;
+        border: 2px solid #37BE9E;
         border-radius: 5px;
         margin-top: 1%;
         outline: none;
         padding: 1%;
     }
-    .jd-blog-comments{
+
+    .jd-blog-comments {
         width: 80%;
         margin-left: auto;
         margin-right: auto;
@@ -1349,34 +1420,73 @@ show css
 *blog css
 */
 
-.jd-cont{
+.jd-cont-admin {
     display: flex;
     padding-top: 5%;
 }
-@media screen and (max-width:809px){
-    .jd-cont{
+
+@media screen and (max-width:809px) {
+    .jd-cont-admin {
         display: flex;
         flex-direction: column-reverse;
-        padding-top: 5%;
-    } 
-    .jd-admin{
-        width: 75% !important;
+        padding-top: 8%;
+        padding: 2%;
+    }
+
+    .jd-admin {
+        width: 100% !important;
         margin-right: auto;
         margin-left: auto;
         justify-content: center;
         padding-top: 5%;
         padding-bottom: 2%;
     }
-}
-.jd-blog-admin{
-       margin-top: 5%;
+
+    .jd-blog-admin {
+        margin-top: 5%;
         padding: 1%;
-        width: 75%;
-        margin-left: auto;  
+        width: 95% !important;
+        margin-left: auto;
         margin-right: auto;
         padding-bottom: 5%;
+    }
+
+    .jd-blog-card-admin {
+        padding-right: 0%;
+        margin-top: 2%;
+        width: 100% !important;
+        padding-bottom: 1%;
+
+    }
+
+    .jd-blog-cont-admin {
+
+        padding: 1%;
+        width: 97% !important;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 3%;
+    }
+
+    .jd-admin {
+
+        margin-top: 12% !important;
+    }
+    .jd-blog-card-admin .jd-blog-banner {
+        min-height: 350px !important;
+    }
 }
-.jd-blog-card-admin{
+
+.jd-blog-admin {
+    margin-top: 5%;
+    padding: 1%;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 5%;
+}
+
+.jd-blog-card-admin {
     padding-right: 0%;
     margin-top: 2%;
     width: 90%;
@@ -1384,43 +1494,50 @@ show css
     border-bottom: 2px solid #37BE9E;
     border-radius: 4px;
 }
-.jd-blog-card-admin .jd-blog-banner{
-   min-height: 450px !important;
+
+.jd-blog-card-admin .jd-blog-banner {
+    min-height: 450px ;
 }
-.jd-blog-cont-admin{
-  
+
+.jd-blog-cont-admin {
+
     padding: 1%;
     width: 90%;
-    margin-left: auto;  
+    margin-left: auto;
     margin-right: auto;
     padding-bottom: 3%;
 }
-.jd-blog-cont-admin a{
+
+.jd-blog-cont-admin a {
     text-decoration: none;
     color: #000;
 }
-.jd-admin{
+
+.jd-admin {
     width: 25%;
     margin-top: 2%;
 }
-.contr button{
-    background:#37BE9E;
+
+.contr button {
+    background: #37BE9E;
     border: none;
     min-height: 40px;
     min-width: 106px;
     font-weight: 600;
     color: #fff;
-    padding:1%;
+    padding: 1%;
     border-radius: 8px;
     margin-top: 2%;
     outline: none;
 }
-.contr button:hover{
-   cursor: pointer;
-    
+
+.contr button:hover {
+    cursor: pointer;
+
 }
-.jd-comment-intro button{
-    background:orangered;
+
+.jd-comment-intro button {
+    background: orangered;
     border: none;
     height: 35px;
     margin-left: auto;
@@ -1428,12 +1545,13 @@ show css
     min-width: 70px;
     font-weight: 600;
     color: #fff;
-    padding:1%;
+    padding: 1%;
     border-radius: 8px;
     margin-top: 2%;
     outline: none;
 }
-.jd-logout{
+
+.jd-logout {
     margin-left: auto;
     margin-right: 2%;
 }
@@ -1442,36 +1560,40 @@ show css
 addpost css
 */
 
-.post-wrapper{
+.post-wrapper {
     width: 75%;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 4%; 
-    display:flex ;
+    margin-top: 4%;
+    display: flex;
     flex-direction: column;
     margin-bottom: 5%;
 }
-.post-intro{
-    margin-top: 6%; 
+
+.post-intro {
+    margin-top: 6%;
     color: #37BE9E;
     margin-left: 12%;
     font-size: 27px;
-   
+
 }
-.post-wrapper input{
+
+.post-wrapper input {
     width: 70%;
     min-height: 34px;
     padding: .5%;
     border-radius: 5px;
     border: 2px solid #37BE9E;
     margin-top: 1%;
-    
+
 }
-.post-wrapper label{
+
+.post-wrapper label {
     margin-top: 3%;
     opacity: .7;
 }
-.post-wrapper textarea{
+
+.post-wrapper textarea {
     width: 70%;
     min-height: 34px;
     padding: .5%;
@@ -1479,10 +1601,10 @@ addpost css
     border: 2px solid #37BE9E;
     margin-top: 1%;
     outline: none;
-    
+
 }
 
-.post-wrapper button{
+.post-wrapper button {
     width: 71%;
     min-height: 34px;
     padding: .5%;
@@ -1493,30 +1615,36 @@ addpost css
     color: #fff;
     font-weight: 600;
     font-size: 20px;
-    
+
 }
-.post-wrapper button:hover{
+
+.post-wrapper button:hover {
     cursor: pointer;
 }
-.cancel{
-    background: orangered!important;
+
+.cancel {
+    background: orangered !important;
     border: none !important;
 }
-@media screen and (max-width:809px){
-    .post-wrapper{
+
+@media screen and (max-width:809px) {
+    .post-wrapper {
         width: 85%;
         margin-bottom: 25%;
     }
-    .jd-addPost{
+
+    .jd-addPost {
         margin-top: 15%;
     }
-    .post-intro{
-       
+
+    .post-intro {
+
         margin-left: 9%;
         font-size: 27px;
-       
+
     }
-    .post-wrapper textarea{
+
+    .post-wrapper textarea {
         width: 100%;
         min-height: 34px;
         padding: .5%;
@@ -1524,30 +1652,36 @@ addpost css
         border: 2px solid #37BE9E;
         margin-top: 1%;
         outline: none;
-        
+
     }
-    .post-wrapper input{
+
+    .post-wrapper input {
         width: 100%;
     }
-    .post-wrapper button{
+
+    .post-wrapper button {
         width: 101%;
     }
 }
-@media screen and (max-width:420px){
-    .post-wrapper{
+
+@media screen and (max-width:420px) {
+    .post-wrapper {
         width: 85%;
         margin-bottom: 25%;
     }
-    .jd-addPost{
+
+    .jd-addPost {
         margin-top: 20%;
     }
-    .post-intro{
-       
+
+    .post-intro {
+
         margin-left: 9%;
         font-size: 27px;
-       
+
     }
-    .post-wrapper textarea{
+
+    .post-wrapper textarea {
         width: 100%;
         min-height: 34px;
         padding: .5%;
@@ -1555,12 +1689,14 @@ addpost css
         border: 2px solid #37BE9E;
         margin-top: 1%;
         outline: none;
-        
+
     }
-    .post-wrapper input{
+
+    .post-wrapper input {
         width: 100%;
     }
-    .post-wrapper button{
+
+    .post-wrapper button {
         width: 101%;
     }
 }
@@ -1568,27 +1704,30 @@ addpost css
 /*
 showpostadmin
 */
-.jd-post-controll{
+.jd-post-controll {
     margin-top: 3%;
 }
-.delete{
+
+.delete {
     background: orangered;
     padding: 1%;
     color: #fff;
     border-radius: 5px;
 }
-.edit{
+
+.edit {
     background: #37BE9E;
     color: #fff;
     padding: 1%;
     border-radius: 5px;
 }
-.deleteicon{
-font-size: 1.2em;
-padding-top: 2%;
+
+.deleteicon {
+    font-size: 1.2em;
+    padding-top: 2%;
 }
 
-.errors{
+.errors {
     color: orangered;
     padding-top: 1%;
 }
