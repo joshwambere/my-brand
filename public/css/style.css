@@ -1472,6 +1472,7 @@ show css
 
         margin-top: 12% !important;
     }
+
     .jd-blog-card-admin .jd-blog-banner {
         min-height: 350px !important;
     }
@@ -1496,7 +1497,7 @@ show css
 }
 
 .jd-blog-card-admin .jd-blog-banner {
-    min-height: 450px ;
+    min-height: 450px;
 }
 
 .jd-blog-cont-admin {

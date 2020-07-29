@@ -35,8 +35,8 @@ form.addEventListener('submit', (e) => {
         userError.innerHTML = messageUser;
         pwdError.innerHTML = messagepwd;
 
-    }else{
-        window.location.href='../../app/html/admin.html', true;
-        
+    } else {
+        window.location.href = '../../app/html/admin.html', true;
+
     }
 })
