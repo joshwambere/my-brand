@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../../public/img/logo.png" />
@@ -10,7 +11,11 @@
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <script defer src="https://friconix.com/cdn/friconix.js"> </script>
+
+
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
     <link rel="stylesheet" href="../../public/css/style.css">
     <title>Johnson</title>
 </head>
@@ -56,66 +61,9 @@
                     <div class="blog-intro">
                         <h3>Stories</h3>
                     </div>
-                    <a href="showPostAdmin.html">
-                        <div class="jd-blog-card-admin">
-
-                            <div class="jd-blog-banner"
-                                style="background: url('../../public/img/obj.png'); background-size: cover;">
-
-                            </div>
-                            <div class="jd-blog-header">
-                                <h2>
-                                    more about objects in JS es6
-                                </h2>
-                            </div>
-                            <div class="jd-blog-content">
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis, labore maiores
-                                    molestiae repellendus ad corporis minus impedit dignissimos sint dolores id
-                                    praesentium non quod, dolor facere ipsam natus, assumenda aspernatur.</p>
-                                <a href="show.html">Read more...</a>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="showPostAdmin.html">
-                        <div class="jd-blog-card-admin">
-
-                            <div class="jd-blog-banner"
-                                style="background: url('../../public/img/phpc.png'); background-size: cover;">
-
-                            </div>
-                            <div class="jd-blog-header">
-                                <h2>
-                                    Constructors in PHP
-                                </h2>
-                            </div>
-                            <div class="jd-blog-content">
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis, labore maiores
-                                    molestiae repellendus ad corporis minus impedit dignissimos sint dolores id
-                                    praesentium non quod, dolor facere ipsam natus, assumenda aspernatur.</p>
-                                <a href="show.html">Read more...</a>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="showPostAdmin.html">
-                        <div class="jd-blog-card-admin">
-
-                            <div class="jd-blog-banner"
-                                style="background: url('../../public/img/vuu.jpeg'); background-size: cover;">
-
-                            </div>
-                            <div class="jd-blog-header">
-                                <h2>
-                                    V:bind in Vuejs
-                                </h2>
-                            </div>
-                            <div class="jd-blog-content">
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis, labore maiores
-                                    molestiae repellendus ad corporis minus impedit dignissimos sint dolores id
-                                    praesentium non quod, dolor facere ipsam natus, assumenda aspernatur.</p>
-                                <a href="show.html">Read more...</a>
-                            </div>
-                        </div>
-                    </a>
+                    <div id="blogHolder">
+                    
+                    </div>
 
                     <ul class="pagination">
                         <p class="page-btn"><a href="">
@@ -136,13 +84,15 @@
             <div class="jd-admin">
                 <div class="jd-user-info">
                     <img src="../../app/public/userr.png" alt="">
-                    <div>
+                    <div class="jd-admin-right">
                         <div class="jd-comment-intro">
                             <img src="../../public/img/userr.png" alt="">
                             <p>name: <span>Dusabe Johnson</span> </p>
-                            <a class="jd-logout" href="Login.html"><button>logout</button></a>
+                            
 
                         </div>
+                        <a class="jd-logout" href="Login.html"><button>logout</button></a>
+                        <a href="profile.html"><button class="jd-profile">profile</button></a>
 
 
                     </div>
@@ -212,9 +162,8 @@
 
 
     </section>
-    <script>
-
-    </script>
+    
+    <script src="../../public/js/postAdmin.js"></script>
     <script src="../../public/js/main.js"></script>
 </body>
 

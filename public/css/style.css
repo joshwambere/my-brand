@@ -1099,6 +1099,12 @@ blog css
     font-size: 30px;
     color: #37BE9E;
 }
+.blog-intro h4 {
+    font-size: 20px;
+    color: #37BE9E;
+    padding-top: 3%;
+}
+
 
 .jd-blog-cont a {
     text-decoration: none;
@@ -1472,6 +1478,11 @@ show css
 
         margin-top: 12% !important;
     }
+    .jd-user-info{
+        width: 62%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
     .jd-blog-card-admin .jd-blog-banner {
         min-height: 350px !important;
@@ -1516,18 +1527,18 @@ show css
 
 .jd-admin {
     width: 25%;
-    margin-top: 2%;
+    margin-top: 6%;
 }
 
 .contr button {
     background: #37BE9E;
     border: none;
     min-height: 40px;
-    min-width: 106px;
+    min-width: 160px;
     font-weight: 600;
     color: #fff;
     padding: 1%;
-    border-radius: 8px;
+    border-radius: 4px;
     margin-top: 2%;
     outline: none;
 }
@@ -1537,7 +1548,7 @@ show css
 
 }
 
-.jd-comment-intro button {
+.jd-admin-right button {
     background: orangered;
     border: none;
     height: 35px;
@@ -1547,9 +1558,18 @@ show css
     font-weight: 600;
     color: #fff;
     padding: 1%;
-    border-radius: 8px;
+    border-radius: 4px;
     margin-top: 2%;
     outline: none;
+}
+.jd-admin-right button:hover {
+    cursor: pointer;
+}
+.jd-profile{
+    background: #37BE9E!important;
+}
+.jd-profile:hover{
+    cursor: pointer; 
 }
 
 .jd-logout {
@@ -1714,7 +1734,12 @@ showpostadmin
     padding: 1%;
     color: #fff;
     border-radius: 5px;
+    margin-left: 1%;
 }
+.delete:hover {
+    cursor: pointer;;
+}
+
 
 .edit {
     background: #37BE9E;
@@ -1731,4 +1756,107 @@ showpostadmin
 .errors {
     color: orangered;
     padding-top: 1%;
+}
+
+
+
+
+/*
+profile css
+*/
+
+.jd-profile-card{
+    width: 98%;
+    display: flex;
+    margin-top: 12%;
+    padding-bottom: 7%;
+}
+.jd-img {
+    max-width: 45%;
+    padding-left: 2%;
+    
+}
+
+.jd-img img{
+    width: 80%;
+    height: 90%;
+    border-radius: 10px;
+    padding: 1%;
+}
+.jd-img input{
+    min-width: 100px;
+    min-height: 32px;
+    color: #fff;
+    background: #37BE9E;
+    text-align: center;
+    border-radius: 4px;
+    border: none;
+    margin-bottom: 3%;
+    margin-left: 1%;
+    border: none;
+    outline: none;
+}
+
+.Ttable th{
+    background: #37BE9E;
+    color: #f4f4f4;
+    padding: 1%;
+    min-width: 170px;
+    min-height: 33px;
+
+}
+.Ttable td{
+    padding: 1%;
+    min-width: 180px;
+    border: 2px solid #f4f4f4;
+    min-height: 33px;
+
+}
+
+.Ttable ion-icon {
+    color: #fff;
+    font-size: 21px;
+    
+}
+.Ttable button {
+    color: #fff;
+    background: #37BE9E;
+    border: none;
+    padding: 1%;
+    min-width: 30px;
+    padding-top: 2.5%;
+    border-radius: 4px;
+    outline: none; 
+}
+.Ttable button:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width:809px) {
+    
+    .jd-profile-card{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 12%;
+        padding-bottom: 7%;
+    }
+    .Ttable th{
+        background: #37BE9E;
+        color: #f4f4f4;
+        padding: 1%;
+        min-width: 120px;
+        min-height: 33px;
+    
+    }
+    .Ttable td{
+        padding: 1%;
+        min-width: 90px;
+        border: 2px solid #f4f4f4;
+        min-height: 33px;
+    
+    }
+}
+.tbl td{
+    min-width: 40px;
 }

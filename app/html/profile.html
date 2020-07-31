@@ -37,7 +37,7 @@
                             </li>
 
                             <li class="jd-link-item">
-                                <a href="blog.html">blog</a>
+                                <a href="">blog</a>
                             </li>
                             <li class="jd-link-item">
                                 <a href="contacts.html">Contacts</a>
@@ -50,86 +50,87 @@
                 </nav>
             </div>
         </div>
-        <div class="jd-blog">
-            <div class="jd-blog-cont">
-                <div class="blog-show-intro">
-                    <h3><a href="blog.html">
-                            <ion-icon name="arrow-back-circle-outline" style="font-size: 30px; color: aqua;"></ion-icon>
-                        </a></h3>
+        <div class="jd-profile-page">
+            <div class="jd-profile-card">
+                <div class="jd-img">
+                    <img src="../../public/img/solo.jpg" alt="">
+                    
+                    <input id="files" type="file" style="display:none;" />
+                    <input type="button" value="change"
+                        onclick="document.getElementById('files').click();" />
                 </div>
-
-                <div class="show-card">
-
-                    <div class="jd-blog-show-banner"
-                        style="background: url('../../public/img/phpc.png'); background-size: cover;">
-
+                <div class="jd-card-input">
+                    <div class="blog-intro">
+                        <h4>Skills</h4>
                     </div>
-                    <div class="jd-blog-header">
-                        <h2 class="title-show">
-                            more about objects in JS es6
-                        </h2>
-                    </div>
-                    <div class="jd-blog-desc">
-                        <p>posted on: 12 Oct 2020 by Johnson</p>
-                    </div>
-                    <div class="jd-blog-content show-content">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis, labore maiores molestiae
-                            repellendus ad corporis minus impedit dignissimos sint dolores id praesentium non quod,
-                            dolor facere ipsam natus, assumenda aspernatur.
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis odit vero porro cupiditate,
-                            voluptas error dicta sed voluptate, eum mollitia architecto numquam ipsa neque vitae maiores
-                            doloremque nemo dolore assumenda?
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut est odio, facere quas magni ut
-                            temporibus praesentium eum tempora numquam expedita fuga, perspiciatis quod incidunt ullam
-                            nesciunt adipisci quo voluptate.
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat esse modi veritatis iste
-                            velit delectus commodi officia, sunt doloribus, excepturi vitae alias in voluptas maiores
-                            cupiditate. Laudantium natus eaque rerum.
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus doloremque, tempore
-                            sed doloribus ratione deserunt, odit dolorem, dolor voluptate delectus nisi modi veniam
-                            earum molestias aspernatur non vel ipsum beatae.
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus eum ab consequatur
-                            temporibus ea, libero, est sint architecto, ex aliquid explicabo voluptas soluta in omnis
-                            labore vero. Non, consequatur nam.
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem, consequuntur! Voluptates
-                            maxime reiciendis fuga ab officiis inventore nam excepturi vero quod accusamus, odit unde
-                            minima harum doloremque aperiam ea illo?
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde dolorem accusantium quae
-                            tempore sed quaerat minima sapiente fugiat et nostrum incidunt optio placeat voluptatibus,
-                            fugit qui labore repellat modi voluptatem.
-                        </p>
+                    <div class="jd-user-infos-card">
+                        <table class="Ttable">
+                            <tr>
+                                <th>skill name</th>
+                                <th>icon</th>
+                                <th>add new</th>
+                            </tr>
+                            <tr>
+                                <td>php</td>
+                                <td></td>
 
+                                <td><button>
+                                        <ion-icon name="add-circle-outline"></ion-icon>
+                                    </button></td>
+                            </tr>
+                        </table>
                     </div>
-                </div>
+                    <div class="blog-intro">
+                        <h4>Services</h4>
+                    </div>
+                    <div class="jd-user-infos-card">
+                        <div class="jd-infos-inputs">
+                            <table class="Ttable">
+                                <tr>
+                                    <th>Services</th>
+                                    <th>icon</th>
+                                    <th>add new</th>
+                                </tr>
+                                <tr>
+                                    <td>Front end</td>
+                                    <td>/</td>
 
-            </div>
-            <div class="jd-blog-comments">
-                <div class="intro-comment">
-                    <h3>Leave a Replay</h3>
-                    <p>Your email will not be published reauired fields are marked *</p>
-                </div>
-                <!--  <div class="jd-comment-intro">
-                    <img src="../../public/img/userr.png" alt="">
-                    <p>On: 12 dec 2020</p>
-                </div>-->
-                <div class="jd-comment-cont">
-                    <form action="" id="commentForm">
-                        <textarea name="" id="comment-text" cols="30" rows="10" placeholder="COMMENT"></textarea>
-                        <p class="errors" id="comment-text-error"></p>
-                        <div>
-                            <input type="text" placeholder="name*" id="name-coments">
-                            
-                            <input type="email" placeholder="email*" id="email-comments">
-                            
-                            <button type="submit">Send Comment</button>
+                                    <td><button>
+                                            <ion-icon name="add-circle-outline"></ion-icon>
+                                        </button></td>
+                                </tr>
+                            </table>
                         </div>
-                        <p class="errors" id="email-comments-error"></p>
-                        <p class="errors" id="name-coments-error"></p>
-                    </form>
-
+                    </div>
+                    <div class="jd-user-infos-card ">
+                        <div class="blog-intro">
+                            <h4>Personal Info</h4>
+                        </div>
+                        <div class="jd-infos-inputs">
+                            <table class="Ttable">
+                                <tr>
+                                    <th>Name</th>
+                                    <th>email</th>
+                                    <th>phone</th>
+                                    <th>Address</th>
+                                    <th>add new</th>
+                                </tr>
+                                <tr class="tbl">
+                                    <td>Johnson Dusabe</td>
+                                    <td>Johnsondusabe@gmail.com</td>
+                                    <td>+250788336717</td>
+                                    <td>Kigali, Rwanda</td>
+                                    <td><button>
+                                            <ion-icon name="add-circle-outline"></ion-icon>
+                                        </button></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
 
         <div class="jd-footer">
             <div class="footer-nav">
@@ -140,7 +141,7 @@
                         </li>
 
                         <li class="jd-link-item">
-                            <a href="blog.html">blog</a>
+                            <a href="">blog</a>
                         </li>
                         <li class="jd-link-item">
                             <a href="contacts.html">Contacts</a>
@@ -190,7 +191,6 @@
     <script>
 
     </script>
-    <script src="../../public/js/show.js"></script>
     <script src="../../public/js/main.js"></script>
 </body>
 
