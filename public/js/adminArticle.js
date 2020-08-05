@@ -45,5 +45,17 @@ function viewPost(doc) {
 db.collection('posts').where(firebase.firestore.FieldPath.documentId(id), '==', id).get().then((snapshot) => {
     snapshot.docs.forEach(doc => {
         viewPost(doc);
+        edit(doc);
     });
 })
+
+
+const editblog=document.getElementById('edit');
+
+function edit(doc){
+        editblog.addEventListener('click',(e)=>{
+        e.preventDefault();
+        window.location.href = '../../app/html/AddPost.html', true;
+        sessionStorage=doc.id;
+    })
+}
