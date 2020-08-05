@@ -11,21 +11,22 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
-const db=firebase.firestore();
+const db = firebase.firestore();
 
 const card = document.getElementById('blogHolder');
 
 
+
 function renderPost(doc) {
+    function shorten(str, maxLen, separator = ' ') {
+        if (str.length <= maxLen) return str;
+        return str.substr(0, str.lastIndexOf(separator, maxLen));
+    };
 
-
-
-
-
-    card.setAttribute('data-id', doc.id)
+    var blogContentShort = shorten(doc.data().content, 180, separator = ' ');
     card.innerHTML += `
     <a href="showPostAdmin.html">
-    <div class="jd-blog-card-admin">
+    <div class="jd-blog-card-admin" data-id="${doc.id}" >
 
         <div class="jd-blog-banner"
             style="background: url(${doc.data().cover}); background-size: cover;">
@@ -38,14 +39,14 @@ function renderPost(doc) {
         </div>
         <div class="jd-blog-content">
             <p>
-            ${doc.data().content}
+            ${blogContentShort}
             </p>
             <a href="show.html">Read more...</a>
         </div>
     </div>
 </a>
         `
-        console.log(doc.data().content);
+    setId();
 
 }
 
@@ -57,3 +58,20 @@ db.collection('posts').get().then((snapshot) => {
 })
 
 
+const cards = document.getElementsByClassName('jd-blog-card-admin');
+
+function setId() {
+
+    for (const mycard of cards) {
+        mycard.addEventListener('click', (e) => {
+            e.preventDefault();
+            const id = mycard.getAttribute('data-id');
+            sessionStorage.setItem('data-id', id);
+            window.location.href = '../../app/html/showPostAdmin.html', true;
+        })
+    }
+}
+window.addEventListener('load', () => {
+
+    setId();
+})
