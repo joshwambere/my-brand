@@ -1,23 +1,46 @@
+const humburgerIcn = document.getElementById('humburger');
+const dropMenu = document.getElementById('JdMenu');
 
-const humburgerIcn=document.getElementById('humburger');
-const dropMenu=document.getElementById('JdMenu');
-
-function toggleHumburger(){
+function toggleHumburger() {
     humburgerIcn.classList.toggle('active');
     dropMenu.classList.toggle('active');
 }
-humburgerIcn.addEventListener('click',toggleHumburger);
+humburgerIcn.addEventListener('click', toggleHumburger);
 
-//on click humbergure click
-//validate the form
-const loginBtn=document.getElementById('login');
-console.log(loginBtn);
-var form=document.forms.myForm;
-form.onsubmit=function (){
-    var username =document.getElementById('username').value;
-    var pwd=document.getElementById('pwd').value;
-    if(username=='johnson' && pwd=='okayfine'){
-        console.log('yes');
-        window.location.href ='../../app/html/admin.html';
-    }
+
+//validate the login form
+function validation() {
+    const name = document.getElementById('username');
+    const pwd = document.getElementById('pwd');
+    const form = document.getElementById('myForm')
+    const userError = document.getElementById('UsernameError')
+    const pwdError = document.getElementById('PwdError')
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        var messageUser = [];
+        var messagepwd = [];
+        if (name.value === '' || name == null) {
+            messageUser.push('username is required');
+        }
+
+        if (pwd.value === '' || pwd.value == null) {
+            messagepwd.push('password is required');
+        } else {
+            if (pwd.value.length < 6) {
+                messagepwd.push('password must be 6 char long');
+            }
+        }
+
+        if (messageUser.length > 0 || messagepwd.length > 0) {
+            e.preventDefault();
+            userError.innerHTML = messageUser;
+            pwdError.innerHTML = messagepwd;
+
+        } else {
+            window.location.href = '../../app/html/admin.html', true;
+
+        }
+    })
 }
+validation();
+

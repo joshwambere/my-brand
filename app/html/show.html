@@ -10,7 +10,11 @@
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <script defer src="https://friconix.com/cdn/friconix.js"> </script>
+
+
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
     <link rel="stylesheet" href="../../public/css/style.css">
     <title>Johnson</title>
 </head>
@@ -35,7 +39,7 @@
                             <li class="jd-link-item">
                                 <a href="../../index.html">Home</a>
                             </li>
-                            
+
                             <li class="jd-link-item">
                                 <a href="blog.html">blog</a>
                             </li>
@@ -52,57 +56,46 @@
         </div>
         <div class="jd-blog">
             <div class="jd-blog-cont">
-                <div class="blog-show-intro"><h3><a href="blog.html"><ion-icon name="arrow-back-circle-outline" style="font-size: 30px; color: aqua;"></ion-icon></a></h3></div>
-               
-                    <div class="show-card">
+                <div class="blog-show-intro">
+                    <h3><a href="blog.html">
+                            <ion-icon name="arrow-back-circle-outline" style="font-size: 30px; color: aqua;"></ion-icon>
+                        </a></h3>
+                </div>
+
+                <div class="show-card" id="show-card">
+
                     
-                        <div class="jd-blog-show-banner" style="background: url('../../public/img/phpc.png'); background-size: cover;">
-    
-                        </div>
-                        <div class="jd-blog-header">
-                            <h2 class="title-show">
-                                more about objects in JS es6
-                            </h2>
-                        </div>
-                        <div class="jd-blog-desc">
-                            <p>posted on: 12 Oct 2020 by Johnson</p>
-                        </div>
-                        <div class="jd-blog-content show-content">
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis, labore maiores molestiae repellendus ad corporis minus impedit dignissimos sint dolores id praesentium non quod, dolor facere ipsam natus, assumenda aspernatur.
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis odit vero porro cupiditate, voluptas error dicta sed voluptate, eum mollitia architecto numquam ipsa neque vitae maiores doloremque nemo dolore assumenda?
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut est odio, facere quas magni ut temporibus praesentium eum tempora numquam expedita fuga, perspiciatis quod incidunt ullam nesciunt adipisci quo voluptate.
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat esse modi veritatis iste velit delectus commodi officia, sunt doloribus, excepturi vitae alias in voluptas maiores cupiditate. Laudantium natus eaque rerum.
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus doloremque, tempore sed doloribus ratione deserunt, odit dolorem, dolor voluptate delectus nisi modi veniam earum molestias aspernatur non vel ipsum beatae.
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus eum ab consequatur temporibus ea, libero, est sint architecto, ex aliquid explicabo voluptas soluta in omnis labore vero. Non, consequatur nam.
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem, consequuntur! Voluptates maxime reiciendis fuga ab officiis inventore nam excepturi vero quod accusamus, odit unde minima harum doloremque aperiam ea illo?
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde dolorem accusantium quae tempore sed quaerat minima sapiente fugiat et nostrum incidunt optio placeat voluptatibus, fugit qui labore repellat modi voluptatem.
-                            </p>
-                            
-                        </div>
-                    </div>
-                
+                </div>
+
             </div>
             <div class="jd-blog-comments">
                 <div class="intro-comment">
                     <h3>Leave a Replay</h3>
-                    <p>Your email will not be published reauired fields are marked  *</p>
+                    <p>Your email will not be published reauired fields are marked *</p>
                 </div>
-              <!--  <div class="jd-comment-intro">
+                <!--  <div class="jd-comment-intro">
                     <img src="../../public/img/userr.png" alt="">
                     <p>On: 12 dec 2020</p>
                 </div>-->
-                 <div class="jd-comment-cont">
-                    <textarea name="" id="" cols="30" rows="10" placeholder="COMMENT"></textarea>
-                    <div>
-                    <input type="text" placeholder="name*">
-                    <input type="email" placeholder="email*">
-                    <button>Send Comment</button>
-                    </div>
-                    
+                <div class="jd-comment-cont">
+                    <form action="" id="commentForm">
+                        <textarea name="" id="comment-text" cols="30" rows="10" placeholder="COMMENT"></textarea>
+                        <p class="errors" id="comment-text-error"></p>
+                        <div>
+                            <input type="text" placeholder="name*" id="name-coments">
+                            
+                            <input type="email" placeholder="email*" id="email-comments">
+                            
+                            <button type="submit">Send Comment</button>
+                        </div>
+                        <p class="errors" id="email-comments-error"></p>
+                        <p class="errors" id="name-coments-error"></p>
+                    </form>
+
                 </div>
             </div>
         </div>
-        
+
         <div class="jd-footer">
             <div class="footer-nav">
                 <div class="jd-nav-menu btm-menu" id="JdMenu" style="display: grid;">
@@ -110,7 +103,7 @@
                         <li class="jd-link-item">
                             <a href="../../index.html">Home</a>
                         </li>
-                        
+
                         <li class="jd-link-item">
                             <a href="blog.html">blog</a>
                         </li>
@@ -159,9 +152,8 @@
 
 
     </section>
-    <script>
-
-    </script>
+    <script type="module" src="../../public/js/article.js"></script>
+    <script src="../../public/js/show.js"></script>
     <script src="../../public/js/main.js"></script>
 </body>
 
