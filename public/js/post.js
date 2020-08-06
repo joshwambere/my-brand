@@ -1,17 +1,7 @@
-var firebaseConfig = {
-    apiKey: "AIzaSyBG5hHsXZ-4IBTRolWhznPIPVjl-7EZPh8",
-    authDomain: "mybrand-61fba.firebaseapp.com",
-    databaseURL: "https://mybrand-61fba.firebaseio.com",
-    projectId: "mybrand-61fba",
-    storageBucket: "mybrand-61fba.appspot.com",
-    messagingSenderId: "971411413605",
-    appId: "1:971411413605:web:e9ae0257c4238b9ef9448c",
-    measurementId: "G-B9F4EYSBSS"
-};
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-firebase.analytics();
-const db = firebase.firestore();
+/**
+ * import firebase config file
+*/
+import {db}from './config.js';
 
 const card = document.getElementById('blogHolder');
 
@@ -23,7 +13,7 @@ function renderPost(doc) {
         return str.substr(0, str.lastIndexOf(separator, maxLen));
     };
 
-    var blogContentShort = shorten(doc.data().content, 180, separator = ' ');
+    var blogContentShort = shorten(doc.data().content, 180, ' ');
     card.innerHTML += `
         <a class="blog-card-cl-card">
         <div class="jd-blog-card" data-id="${doc.id}">

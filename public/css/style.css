@@ -1726,15 +1726,30 @@ addpost css
 showpostadmin
 */
 .jd-post-controll {
+    display: flex;
     margin-top: 3%;
 }
-
-.delete {
+#edit{
+    background: #37BE9E;
+    width: 100px;
+    padding: 8px;
+    border-radius: 6px;
+    justify-content: center;
+}
+#delete{
     background: orangered;
+    width: 100px;
+    padding: 8px;
+    border-radius: 6px;
+    justify-content: center;
+    margin-left: 3%;
+}
+.delete {
+    
     padding: 1%;
     color: #fff;
     border-radius: 5px;
-    margin-left: 1%;
+    
 }
 .delete:hover {
     cursor: pointer;;
@@ -1742,10 +1757,9 @@ showpostadmin
 
 
 .edit {
-    background: #37BE9E;
+
     color: #fff;
-    padding: 1%;
-    border-radius: 5px;
+  
 }
 
 .deleteicon {

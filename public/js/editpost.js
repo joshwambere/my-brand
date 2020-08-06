@@ -6,6 +6,7 @@ const articleId = sessionStorage.getItem('data-id');
 db.collection('posts').where(firebase.firestore.FieldPath.documentId(articleId), '==', articleId).get().then((snapshot) => {
     snapshot.docs.forEach(doc => {
         edit(doc);
+        deleteArticle(doc);
     });
 })
 
@@ -67,6 +68,11 @@ function edit(doc){
 
             }
         })
+}
+
+function deleteArticle(){
+   db.collection('posts').doc(articleId).delete();
+   window.location.href='../../app/html/admin.html', true;
 }
 
 

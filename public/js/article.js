@@ -1,17 +1,8 @@
-var firebaseConfig = {
-    apiKey: "AIzaSyBG5hHsXZ-4IBTRolWhznPIPVjl-7EZPh8",
-    authDomain: "mybrand-61fba.firebaseapp.com",
-    databaseURL: "https://mybrand-61fba.firebaseio.com",
-    projectId: "mybrand-61fba",
-    storageBucket: "mybrand-61fba.appspot.com",
-    messagingSenderId: "971411413605",
-    appId: "1:971411413605:web:e9ae0257c4238b9ef9448c",
-    measurementId: "G-B9F4EYSBSS"
-};
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-firebase.analytics();
-const db = firebase.firestore();
+/**
+ * import firebase config file
+*/
+import {db}from './config.js';
+
 
 const id = sessionStorage.getItem('data-id');
 const showCard = document.getElementById('show-card')
@@ -29,7 +20,7 @@ function viewPost(doc) {
                 </h2>
             </div>
             <div class="jd-blog-desc">
-                <p>posted on: ${doc.data().postedAt} by ${doc.data().postedBy}</p>
+                <p>posted on: ${doc.data().postedAt.toDate()} by ${doc.data().postedBy}</p>
             </div>
             <div class="jd-blog-content show-content">
                 <p>
