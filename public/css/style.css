@@ -561,6 +561,8 @@
     .jd-skillsy {
         padding-top: 2% !important;
         display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
         width: 100%;
         align-items: center;
 
@@ -601,7 +603,8 @@
 }
 
 .jd-skills-box {
-    width: 100%;
+    width:33%;
+    box-sizing: border-box;
     min-height: 200px;
     border: 2px solid rgba(0, 0, 0, 0.125);
     border-radius: 10px;
@@ -609,9 +612,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 1%;
     background: #ffff !important;
     color: #000;
+    margin-top: 1%;
 
 }
 
@@ -755,6 +758,8 @@
     .jd-contacts-cont {
         padding: 4%;
         display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
         flex-direction: column;
         width: 100%;
         align-items: center;
@@ -790,6 +795,8 @@
 .jd-contacts-cont {
     padding: 4%;
     display: flex;
+    flex-wrap: wrap;
+        justify-content: space-between;
     width: 100%;
 }
 

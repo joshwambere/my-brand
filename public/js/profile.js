@@ -18,9 +18,7 @@ skillbtn.addEventListener('click',(e)=>{
         <tr>
             <td>${name}</td>
             <td>${icon}</td>
-            <td><button>
-                                                <ion-icon name="add-circle-outline"></ion-icon>
-                                            </button></td>
+            <td><button> <ion-icon name="add-circle-outline"></ion-icon> </button></td>
         </tr>
     `;
     skilltable.innerHTML+=tableTemplate;
@@ -86,13 +84,69 @@ Pbtn.addEventListener('click',(e)=>{
     Paddress.value="";
 })
 
-
+/**
+ * insert skill in skills collection
+*/
 
 let savedata=document.getElementById('saveInfo');
 savedata.addEventListener('click',(e)=>{
     e.preventDefault();
-    
-    db.collection('users').add({
-        Sname:skilltable.rows.time[1],
-    })
+    /**
+     * insert service in service collection
+    */
+    for(var i=1;i< servicetable.getElementsByTagName('tr').length; i++){
+        let serviceName=servicetable.getElementsByTagName('tr')[i].getElementsByTagName('td')[0].innerText;
+        let serviceIcon=servicetable.getElementsByTagName('tr')[i].getElementsByTagName('td')[1].innerText;
+        db.collection('service').add({
+            serviceName:serviceName,
+            serviceIcon:serviceIcon
+        }).then(()=>{
+            console.log('done');
+        }).catch(function(error) {
+                console.log("Error inserting the document:", error);
+        });
+            
+    }
+
+    /**
+     * insert service in service collection
+    */
+
+    for(var i=1;i< skilltable.getElementsByTagName('tr').length; i++){
+        let skillName=skilltable.getElementsByTagName('tr')[i].getElementsByTagName('td')[0].innerText;
+        let skillIcon=skilltable.getElementsByTagName('tr')[i].getElementsByTagName('td')[1].innerText;
+        db.collection('skills').add({
+            skillName:skillName,
+            skillIcon:skillIcon
+        }).then(()=>{
+            console.log('done');
+        }).catch(function(error) {
+                console.log("Error inserting the document:", error);
+        });
+            
+    }
+    /**
+     * insert personl info in service collection
+    */
+
+   for(var i=1;i< ptable.getElementsByTagName('tr').length; i++){
+    let pName=ptable.getElementsByTagName('tr')[i].getElementsByTagName('td')[0].innerText;
+    let pEmail=ptable.getElementsByTagName('tr')[i].getElementsByTagName('td')[1].innerText;
+    let Pphone=ptable.getElementsByTagName('tr')[i].getElementsByTagName('td')[2].innerText;
+    let Paddress=ptable.getElementsByTagName('tr')[i].getElementsByTagName('td')[3].innerText;
+    db.collection('personal').add({
+        pName:pName,
+        pEmail:pEmail,
+        Pphone:Pphone,
+        Paddress:Paddress
+    }).then(()=>{
+        console.log('done');
+    }).catch(function(error) {
+            console.log("Error inserting the document:", error);
+    });
+        
+}
+
 })
+
+
