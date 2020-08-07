@@ -70,3 +70,9 @@ window.addEventListener('load', () => {
     setId();
 })
 
+const logout=document.getElementById('logout');
+logout.addEventListener('click',(e)=>{
+    auth.signOut().then(()=>{
+        window.location.href='../../app/html/Login.html'
+    })
+})
