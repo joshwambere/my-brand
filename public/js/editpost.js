@@ -1,12 +1,14 @@
+/**
+ * import firebase config file
+*/
+import {db}from './config.js';
+
 const articleId = sessionStorage.getItem('data-id');
 
-
-
-
-db.collection('posts').where(firebase.firestore.FieldPath.documentId(articleId), '==', articleId).get().then((snapshot) => {
+db.collection('posts').where(firebase.firestore.FieldPath.documentId(), '==', articleId).get().then((snapshot) => {
     snapshot.docs.forEach(doc => {
         edit(doc);
-        deleteArticle(doc);
+    
     });
 })
 
@@ -14,7 +16,8 @@ db.collection('posts').where(firebase.firestore.FieldPath.documentId(articleId),
 
 
 function edit(doc){
-        const title=document.getElementById('title');
+        if(articleId.length>0){
+            const title=document.getElementById('title');
         const cover=document.getElementById('cover');
         const content=document.getElementById('content');
         title.value=doc.data().title;
@@ -53,27 +56,27 @@ function edit(doc){
 
             } else {
                 var postedAt= firebase.firestore.Timestamp.fromDate(new Date()).toDate();
-                console.log(postedAt);
-                db.collection('posts').where(firebase.firestore.FieldPath.documentId(articleId), '==', articleId).update({
+                db.collection('posts').doc(articleId).set({
                     title: title.value,
                     content: content.value,
                     cover: cover.value,
                     postedBy: "johnson",
-                    postedAt: postedAt
+                    postedAt: postedAt,
+
+                }).catch(function(error) {
+                    console.log("Error getting document:", error);
                 });
-                title.value='';
-                content.value='';
-                cover.value='';
+                
+                
+                
                 
 
             }
         })
+        }
 }
 
-function deleteArticle(){
-   db.collection('posts').doc(articleId).delete();
-   window.location.href='../../app/html/admin.html', true;
-}
+
 
 
 

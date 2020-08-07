@@ -48,7 +48,10 @@ db.collection('posts').get().then((snapshot) => {
     });
 })
 
-
+const addnew=document.getElementById('addPost');
+addnew.addEventListener('click', (e)=>{
+    sessionStorage.removeItem('data-id');
+})
 const cards = document.getElementsByClassName('jd-blog-card-admin');
 
 function setId() {
