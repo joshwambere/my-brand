@@ -1,7 +1,7 @@
 /**
  * import firebase config file
 */
-import {db}from './config.js';
+import {db, auth}from './config.js';
 
 
 const card = document.getElementById('blogHolder');
@@ -69,3 +69,4 @@ window.addEventListener('load', () => {
 
     setId();
 })
+
