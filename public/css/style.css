@@ -199,7 +199,7 @@
 
 .jd-owner-img {
     width: 42%;
-    height: 86%;
+    height: 40%;
     border-radius: 50%;
 }
 
@@ -1786,7 +1786,8 @@ profile css
     padding-bottom: 7%;
 }
 .jd-img {
-    max-width: 45%;
+    width: 35%;
+    height: 45%;
     padding-left: 2%;
     
 }
@@ -1809,6 +1810,7 @@ profile css
     margin-left: 1%;
     border: none;
     outline: none;
+    margin-right: auto;
 }
 
 .Ttable th{
@@ -1873,4 +1875,56 @@ profile css
 }
 .tbl td{
     min-width: 40px;
+}
+
+.add-info input{
+    border: #37BE9E 1px solid;
+    padding: 8px;
+    margin-bottom: 1%;
+    border-radius: 3px;
+}
+.add-info button{
+    border:none;
+    padding: 8px;
+    margin-bottom: 1%;
+    border-radius: 3px;
+    background: #37BE9E;
+    color: #fff;
+    min-width: 70px;
+}
+
+#skill-name{
+    border: #37BE9E 1px solid;
+    padding: 8px;
+    margin-bottom: 1%;
+    border-radius: 3px;
+}
+#skill-icon{
+    border: #37BE9E 1px solid;
+    padding: 8px;
+    margin-bottom: 1%;
+    border-radius: 3px;
+}
+#skills-btn{
+    border:none;
+    padding: 8px;
+    margin-bottom: 1%;
+    border-radius: 3px;
+    background: #37BE9E;
+    color: #fff;
+    min-width: 70px;
+}
+
+.savebtn{
+    width: 80px;
+    color: #fff;
+    background: #37BE9E;
+    padding: 10px;
+    font-weight: bold;
+    border: none;
+    margin-top: 4%;
+    border-radius: 4px;
+}
+.savebtn:hover{
+    cursor: pointer;
 }

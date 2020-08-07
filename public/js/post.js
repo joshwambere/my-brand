@@ -77,6 +77,6 @@ function pagination(doc){
     let list=doc;
     let page=null;
     for(let i=0; i<page+6; i++){
-        card.appendChild(list[i]);
+        
     }
 }

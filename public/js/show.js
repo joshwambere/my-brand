@@ -1,3 +1,9 @@
+/**
+ * import firebase config file
+*/
+import {db}from './config.js';
+
+
 function commentValidation() {
   
     const textArea = document.getElementById('comment-text');
@@ -30,6 +36,22 @@ function commentValidation() {
             nameComentsError.innerHTML = errorMsg[1];
             emailCommentsError.innerHTML = errorMsg[2];
 
+        }else{
+            var postedAt= firebase.firestore.Timestamp.fromDate(new Date()).toDate();
+            db.collection('comments').add({
+                
+                cname:nameInput.value,
+                ccomment:textArea.value,
+                cemail:emailInput.value,
+                postedAt:postedAt
+
+            }).then(()=>{
+                nameInput.value="";
+                textArea.value="";
+                emailInput.value="";
+            }).catch(function(error) {
+                    console.log("Error getting document:", error);
+            });
         }
     })
 }
