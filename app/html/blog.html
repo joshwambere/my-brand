@@ -14,6 +14,7 @@
 
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
     <link rel="stylesheet" href="../../public/css/style.css">
     <title>Johnson</title>
@@ -62,14 +63,14 @@
                 </div>
 
                 <ul class="pagination">
-                    <p class="page-btn"><a href=""><ion-icon name="arrow-back-circle-outline" class="pg-icon"></ion-icon></a></p>
+                    <p class="page-btn" id="prev"><a href=""><ion-icon name="arrow-back-circle-outline" class="pg-icon"></ion-icon></a></p>
                     <li class="pages">
                         <a href="">1</a>
                     </li>
                     <li class="pages">
                         <a href="">2</a>
                     </li>
-                    <p class="page-btn"><a href=""><ion-icon name="arrow-forward-circle-outline" class="pg-icon"></ion-icon></a></p>
+                    <p class="page-btn" id="next"><a href=""><ion-icon name="arrow-forward-circle-outline" class="pg-icon"></ion-icon></a></p>
                 </ul>
             </div>
         </div>

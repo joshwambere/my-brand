@@ -41,10 +41,12 @@ function renderPost(doc) {
 
 
 
-db.collection('posts').orderBy('postedAt').onSnapshot(snap =>{
+db.collection('posts').onSnapshot(snap =>{
     let changes=snap.docChanges();
+    pagination(changes);
     changes.forEach(change =>{
         if(change.type=='added'){
+            
             renderPost(change.doc)
         }
     })
@@ -68,3 +70,13 @@ window.addEventListener('load', () => {
 
     setId();
 })
+
+const prev=document.getElementById('prev');
+const next=document.getElementById('next');
+function pagination(doc){
+    let list=doc;
+    let page=null;
+    for(let i=0; i<page+6; i++){
+        card.appendChild(list[i]);
+    }
+}

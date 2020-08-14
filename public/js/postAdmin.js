@@ -1,7 +1,7 @@
 /**
  * import firebase config file
 */
-import {db}from './config.js';
+import {db, auth}from './config.js';
 
 
 const card = document.getElementById('blogHolder');
@@ -48,7 +48,10 @@ db.collection('posts').get().then((snapshot) => {
     });
 })
 
-
+const addnew=document.getElementById('addPost');
+addnew.addEventListener('click', (e)=>{
+    sessionStorage.removeItem('data-id');
+})
 const cards = document.getElementsByClassName('jd-blog-card-admin');
 
 function setId() {
@@ -65,4 +68,11 @@ function setId() {
 window.addEventListener('load', () => {
 
     setId();
+})
+
+const logout=document.getElementById('logout');
+logout.addEventListener('click',(e)=>{
+    auth.signOut().then(()=>{
+        window.location.href='../../app/html/Login.html'
+    })
 })

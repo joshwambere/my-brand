@@ -20,7 +20,7 @@ function viewPost(doc) {
             </h2>
         </div>
         <div class="jd-blog-desc">
-            <p>posted on: ${doc.data().postedAt} by Johnson</p>
+            <p>posted on: ${doc.data().postedAt.toDate()} by Johnson</p>
         </div>
         <div class="jd-blog-content show-content">
             <p>
@@ -32,14 +32,16 @@ function viewPost(doc) {
 
 
 }
-
+let docHolder;
 db.collection('posts').where(firebase.firestore.FieldPath.documentId(id), '==', id).onSnapshot(snap =>{
     let changes=snap.docChanges();
     changes.forEach(change =>{
         if(change.type=='added'){
-            viewPost(change.doc)
+            viewPost(change.doc);
         }
+        
         edit(change.doc);
+        
         
     })
 })
@@ -57,10 +59,8 @@ function edit(doc){
 
 const deleteBlog=document.getElementById('delete');
 
-function deleteArticle(doc){
     deleteBlog.addEventListener('click',(e)=>{
         e.preventDefault();
-        sessionStorage=doc.id;
+        console.log('johnson')
+        db.collection('posts').doc(id).delete();  
     })
-
-}
