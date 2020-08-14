@@ -1,0 +1,50 @@
+GET http://localhost:5000/
+
+
+###
+POST http://localhost:5000/api/users
+
+
+###
+POST http://localhost:5000/api/users/signin
+Content-Type: application/json
+
+{
+    "email": "hello2@gmail.com", 
+    "password": "password2"
+}
+
+###
+GET http://localhost:5000/api/posts
+
+
+###
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTc0MTA4NzgsImV4cCI6MTU5NzQxNDQ3OH0.EkxyCF1DdB2yGCeoVPmdtcEpU6KRDVista8ra3b2-8c
+
+{
+    "title": "Post 1",
+    "content": "hello world",
+    "image": "image location"
+}
+
+###
+GET http://localhost:5000/api/posts/5f3637ad3a73cf29e8ba520e
+
+
+###
+PATCH http://localhost:5000/api/posts/5f3637ad3a73cf29e8ba520e
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTc0MTA4NzgsImV4cCI6MTU5NzQxNDQ3OH0.EkxyCF1DdB2yGCeoVPmdtcEpU6KRDVista8ra3b2-8c
+Content-Type: application/json
+
+{
+    "title": "Updated post",
+    "content": "Updated content",
+    "image": "updated location"
+}
+
+###
+
+DELETE http://localhost:5000/api/posts/5f3637ad3a73cf29e8ba520e
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTc0MTA4NzgsImV4cCI6MTU5NzQxNDQ3OH0.EkxyCF1DdB2yGCeoVPmdtcEpU6KRDVista8ra3b2-8c
