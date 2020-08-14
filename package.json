@@ -4,7 +4,7 @@
   "description": "Portofolio website",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -20,8 +20,6 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.9.28",
-    "nodemon": "^2.0.4"
+    "mongoose": "^5.9.28"
   }
 }
