@@ -2,6 +2,8 @@ const express = require('express');
 const jwt = require('jsonwebtoken');
 const Post = require('./models/Post');
 const User = require('./models/User');
+const Qry = require('./models/query');
+const Cont = require('./models/contacts');
 const checkToken = require('./middleware/checkToken');
 const checkAdmin = require('./middleware/checkAdmin');
 const router = express.Router();
@@ -124,6 +126,29 @@ router.delete('/posts/:id', checkToken, checkAdmin, async (req, res) => {
     res.status(404);
     res.send({ error: "Post doesn't exist!" });
   }
+});
+
+//add comments
+router.post('/comments', checkToken,async (req, res) => {
+  const qry = new Qry({
+    name: req.body.name,
+    email: req.body.email,
+    comment: req.body.comment,
+  });
+  await qry.save();
+  res.send(qry);
+});
+
+//send message
+router.post('/mail',async (req, res) => {
+  const contact = new Cont({
+    name: req.body.name,
+    email: req.body.email,
+    comment: req.body.comment,
+    subject:req.body.subject,
+  });
+  await contact.save();
+  res.send(contact);
 });
 
 module.exports = router;

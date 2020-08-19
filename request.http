@@ -48,3 +48,28 @@ Content-Type: application/json
 
 DELETE https://joh-n-son.herokuapp.com/api/posts/5f3637ad3a73cf29e8ba520e
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTc0MTA4NzgsImV4cCI6MTU5NzQxNDQ3OH0.EkxyCF1DdB2yGCeoVPmdtcEpU6KRDVista8ra3b2-8c
+
+###
+
+POST http://localhost:5000/api/comments
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTc4MjI3ODEsImV4cCI6MTU5NzgyNjM4MX0.-r54aN2AzTbPSuelGn23w6EANOI6V-yJvZMEDWcEnNw
+
+{
+    "name": "johnson",
+    "email": "jo@gmail.com",
+    "comment": "thx this blog is owsome"
+}
+
+###
+
+POST http://localhost:5000/api/mail
+Content-Type: application/json
+
+{
+    "name": "johnson",
+    "email": "jo@gmail.com",
+    "comment": "thx this blog is owsome",
+    "subject": "Need to taks"
+
+}
