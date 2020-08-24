@@ -23,16 +23,35 @@ class Comments {
           } 
           
     }
-
+    /*
+     * find all comments
+    */
     async getComments(req, res) {
-        const comments=await Qry.find();
+        const comments= await Qry.find();
           if(!comments){
             res.status(404).send({ message:'not comment found'}) 
           }else{
-            await qry.save();
             res.status(200).send(comments);
           } 
           
     }
+
+    /**
+     * Find comment based on posts
+     */
+
+    async getCommentsByPost(req, res) {
+        const comments=await Qry.find({post_id:req.body.postId});
+        console.log(comments)
+          if(!comments){
+            res.status(404).send({ message:'not comment found'}) 
+          }else{
+            res.status(200).send(comments);
+          } 
+          
+    }
+
+
+
 }
 module.exports = Comments;

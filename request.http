@@ -69,6 +69,14 @@ GET  http://localhost:5000/api/comments
 Content-Type: application/json
 
 
+###
+
+GET  http://localhost:5000/api/comments/onpost
+Content-Type: application/json
+
+{
+    "postId":"5f439be909f3c3c03e855cc5"
+}
 
 ###
 
