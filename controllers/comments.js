@@ -23,5 +23,16 @@ class Comments {
           } 
           
     }
+
+    async getComments(req, res) {
+        const comments=await Qry.find();
+          if(!comments){
+            res.status(404).send({ message:'not comment found'}) 
+          }else{
+            await qry.save();
+            res.status(200).send(comments);
+          } 
+          
+    }
 }
 module.exports = Comments;
