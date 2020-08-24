@@ -2,11 +2,11 @@ GET https://joh-n-son.herokuapp.com/
 
 
 ###
-POST https://joh-n-son.herokuapp.com/api/users
+POST http://localhost:5000/api/users
 
 
 ###
-POST https://joh-n-son.herokuapp.com/api/users/signin
+POST http://localhost:5000/api/users/signin
 Content-Type: application/json
 
 {
@@ -15,50 +15,52 @@ Content-Type: application/json
 }
 
 ###
-GET https://joh-n-son.herokuapp.com/api/posts
+GET http://localhost:5000/api/posts
 
 
 ###
-POST https://joh-n-son.herokuapp.com/api/posts
+POST http://localhost:5000/api/posts
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTc0MTA4NzgsImV4cCI6MTU5NzQxNDQ3OH0.EkxyCF1DdB2yGCeoVPmdtcEpU6KRDVista8ra3b2-8c
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTgyNjM1NDQsImV4cCI6MTU5ODI2NzE0NH0.cFc9R1DnatI39mr2thLy8smk7Ng74eBtHfszhkja9ts
 
 {
-    "title": "Post 1",
-    "content": "hello world",
-    "image": "image location"
+    "title": "Post 4 ",
+    "content": "hello d louis  again",
+    "image": "image locations"
 }
 
 ###
-GET https://joh-n-son.herokuapp.com/api/posts/5f3637ad3a73cf29e8ba520e
+GET http://localhost:5000/api/posts/5f3637ad3a73cf29e8ba520e
 
 
 ###
-PATCH https://joh-n-son.herokuapp.com/api/posts/5f3637ad3a73cf29e8ba520e
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTc0MTA4NzgsImV4cCI6MTU5NzQxNDQ3OH0.EkxyCF1DdB2yGCeoVPmdtcEpU6KRDVista8ra3b2-8c
+PATCH  http://localhost:5000/api/posts/5f439874ac1a0bb791041ee0
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTgyNjM1NDQsImV4cCI6MTU5ODI2NzE0NH0.cFc9R1DnatI39mr2thLy8smk7Ng74eBtHfszhkja9ts
+
 Content-Type: application/json
 
 {
-    "title": "Updated post",
+    "title": "Updated posts",
     "content": "Updated content",
     "image": "updated location"
 }
 
 ###
 
-DELETE https://joh-n-son.herokuapp.com/api/posts/5f3637ad3a73cf29e8ba520e
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTc0MTA4NzgsImV4cCI6MTU5NzQxNDQ3OH0.EkxyCF1DdB2yGCeoVPmdtcEpU6KRDVista8ra3b2-8c
+DELETE http://localhost:5000/api/posts/5f43973a0dc7a5b5e788db20
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTgyNjM1NDQsImV4cCI6MTU5ODI2NzE0NH0.cFc9R1DnatI39mr2thLy8smk7Ng74eBtHfszhkja9ts
 
 ###
 
 POST http://localhost:5000/api/comments
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTc4MjI3ODEsImV4cCI6MTU5NzgyNjM4MX0.-r54aN2AzTbPSuelGn23w6EANOI6V-yJvZMEDWcEnNw
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTgyNjM1NDQsImV4cCI6MTU5ODI2NzE0NH0.cFc9R1DnatI39mr2thLy8smk7Ng74eBtHfszhkja9ts
+
 
 {
     "name": "johnson",
     "email": "jo@gmail.com",
-    "comment": "thx this blog is owsome"
+    "comment": "thx this blog is owesome"
 }
 
 ###
