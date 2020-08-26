@@ -5,15 +5,26 @@ const router = require("./routes");
 require("dotenv").config();
 
 const PORT = process.env.PORT || process.env.LOCAL_PORT;
-mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true }).then(() => {
-  const app = express();
-  app.use(bodyParser.json());
+const app = express();
+mongoose
+  .connect(process.env.DB_CONNECT, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    console.log("connected");
+  })
+  .catch((error) => {
+    console.log("Error while trying to connect ", error);
+  });
 
-  app.get("/", (req, res) => {
-    return res.send("WELCOME TO MY BRAND");
-  });
-  app.use(router);
-  app.listen(PORT, () => {
-    console.log("connection started!");
-  });
+app.use(bodyParser.json());
+
+app.get("/", (req, res) => {
+  return res.send("WELCOME TO MY BRAND");
 });
+
+app.use(router);
+module.exports = app.listen(PORT, () =>
+  console.log(`listening on port ${PORT}`)
+);

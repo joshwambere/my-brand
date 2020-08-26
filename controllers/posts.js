@@ -19,7 +19,14 @@ class MyPosts {
       date: new Date(),
     });
     await post.save();
-    res.send(post);
+    res.status(201).send(
+      {
+        message:"post created successfuly",
+        status:"Ok",
+        data:post
+      }
+    );
+
   }
   async findOnePost(req, res) {
     try {
@@ -32,7 +39,7 @@ class MyPosts {
       }
     } catch (error) {
       res.status(404);
-      res.console({ error: error.message });
+      res.send({ error: "Post doesn't exist!"});
     }
   }
 
