@@ -27,7 +27,7 @@ class Users {
               email: userFound.email,
               isadmin: userFound.isadmin,
             };
-            const token = jwt.sign(data, 'johnson', { expiresIn: '1h' });
+            const token = jwt.sign(data, 'johnson', { expiresIn: '26h' });
             return res.status(200).json({
               status: 200,
               message: 'User signed in successfully',

@@ -10,8 +10,8 @@ POST http://localhost:5000/api/users/signin
 Content-Type: application/json
 
 {
-    "email": "hello@gmail.com", 
-    "password": "password"
+    "email": "hello2@gmail.com", 
+    "password": "password2"
 }
 
 ###
@@ -21,12 +21,13 @@ GET http://localhost:5000/api/posts
 ###
 POST http://localhost:5000/api/posts
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvQGdtYWlsLmNvbSIsImlzYWRtaW4iOmZhbHNlLCJpYXQiOjE1OTg0MjkwNjQsImV4cCI6MTU5ODQzMjY2NH0.2tY1iSxfkubJX4oYvu7zGF5JxTqXjSKj0sdGICU81LM
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTg0NzUyNDYsImV4cCI6MTU5ODU2ODg0Nn0.9iXLFCq56-6I2W1CIQqqiIIRcxr7SRliqe9nG9ibShE
 
 {
-    "title": "Post 4 ",
-    "content": "hello d louis  again",
+    "title":"josh",
+    "content": "hello kaka again",
     "image": "image locations"
+
 }
 
 ###
@@ -46,8 +47,8 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFp
 
 ###
 
-DELETE http://localhost:5000/api/posts/5f439b5f45a6e465126b2085054f67e909f3c3c03e855cc5
-Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTg0MDQyMjcsImV4cCI6MTU5ODQwNzgyN30.CNJHqJ8h56J02WDUC2wEkRfl6Ngu2JCeED3wuZKZqyY
+DELETE http://localhost:5000/api/posts/5f46245e4d624976735b4be3
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTg0NzUyNDYsImV4cCI6MTU5ODU2ODg0Nn0.9iXLFCq56-6I2W1CIQqqiIIRcxr7SRliqe9nG9ibShE
 
 ###
 
