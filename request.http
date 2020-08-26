@@ -10,8 +10,8 @@ POST http://localhost:5000/api/users/signin
 Content-Type: application/json
 
 {
-    "email": "hello2@gmail.com", 
-    "password": "password2"
+    "email": "hello@gmail.com", 
+    "password": "password"
 }
 
 ###
@@ -21,7 +21,7 @@ GET http://localhost:5000/api/posts
 ###
 POST http://localhost:5000/api/posts
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTg0MDAxNzgsImV4cCI6MTU5ODQwMzc3OH0.UXMsi34smI--ob5dGV1qrPH3hNE5-zmq_y3PNNHyUkE
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvQGdtYWlsLmNvbSIsImlzYWRtaW4iOmZhbHNlLCJpYXQiOjE1OTg0MjkwNjQsImV4cCI6MTU5ODQzMjY2NH0.2tY1iSxfkubJX4oYvu7zGF5JxTqXjSKj0sdGICU81LM
 
 {
     "title": "Post 4 ",
@@ -30,7 +30,7 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFp
 }
 
 ###
-GET http://localhost:5000/api/posts/5f3637ad3a73cf29e8ba520e
+GET http://localhost:5000/api/posts/5f45a6d465126b2085054f64
 
 
 ###
@@ -46,7 +46,7 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFp
 
 ###
 
-DELETE http://localhost:5000/api/posts/5f43986cac1a0bb791041edf
+DELETE http://localhost:5000/api/posts/5f439b5f45a6e465126b2085054f67e909f3c3c03e855cc5
 Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTg0MDQyMjcsImV4cCI6MTU5ODQwNzgyN30.CNJHqJ8h56J02WDUC2wEkRfl6Ngu2JCeED3wuZKZqyY
 
 ###

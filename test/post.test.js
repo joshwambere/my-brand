@@ -81,33 +81,68 @@ describe("Posts API", () => {
         content:"new content for testing",
         img:"image location"
       }
-      const token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTg0Mjc3ODgsImV4cCI6MTU5ODQzMTM4OH0.bCS16YZxBIFcwuhQ3ylspW-N8RDfg-kDjGRBkDgJt5A"
+      const adminToken="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTg0Mjc3ODgsImV4cCI6MTU5ODQzMTM4OH0.bCS16YZxBIFcwuhQ3ylspW-N8RDfg-kDjGRBkDgJt5A"
       chai
         .request(server)
         .post("/api/posts/")
-        .set({"Authorization": token})
+        .set({"Authorization": adminToken})
         .send(post)
         .end((err, response) => {
           response.should.have.status(201);
+          response.body.should.be.a("object");
+          response.body.should.have.property("message").eq("post created successfuly");
           
           done();
         });
     });
 
     /*
-     * providing wrong id
+     * providing wrong tokken
      */
-    it("shouldn't get any post", (done) => {
-      const id2 = "65f45a6d465126b2085054f65";
+    it("should not post any post", (done) => {
+      const post={
+        title:"new title for testing",
+        content:"new content for testing",
+        img:"image location"
+      }
+      const token="eJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTg0Mjc3ODgsImV4cCI6MTU5ODQzMTM4OH0.bCS16YZxBIFcwuhQ3ylspW-N8RDfg-kDjGRBkDgJt5A";
       chai
         .request(server)
-        .get("/api/posts/" + id2)
+        .post("/api/posts/")
+        .set({"Authorization": token})
+        .send(post  )
         .end((err, response) => {
-          response.should.have.status(404);
+          response.should.have.status(401);
           response.body.should.be.a("object");
-          response.body.should.have.property("error").eq("Post doesn't exist!");
+          response.body.should.have.property("error").eq("invalid token");
+          done();
+        });
+    });
+
+
+    /*
+     * providing simple user tokken
+     */
+    it("should not be able to post", (done) => {
+      const post={
+        title:"new title for testing",
+        content:"new content for testing",
+        img:"image location"
+      }
+      const reguralToken="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvQGdtYWlsLmNvbSIsImlzYWRtaW4iOmZhbHNlLCJpYXQiOjE1OTg0MjkwNjQsImV4cCI6MTU5ODQzMjY2NH0.2tY1iSxfkubJX4oYvu7zGF5JxTqXjSKj0sdGICU81LM";
+      chai
+        .request(server)
+        .post("/api/posts/")
+        .set({"Authorization": reguralToken})
+        .send(post  )
+        .end((err, response) => {
+          response.should.have.status(403);
+          response.body.should.be.a("object");
+          response.body.should.have.property("error").eq("Only admins can access this");
           done();
         });
     });
   });
+
+  
 });

@@ -5,9 +5,9 @@ const User = require('../models/User');
 class Users {
     async signUp(req, res) {
         const user = new User({
-            email: 'hello2@gmail.com',
-            password: 'password2',
-            isadmin: true,
+            email: 'hello@gmail.com',
+            password: 'password',
+            isadmin: false,
           });
           try {
             await user.save();
