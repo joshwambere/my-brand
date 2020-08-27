@@ -21,9 +21,11 @@ describe("Comment API", () => {
         .set({ Authorization: tokken })
         .send(comment)
         .end((err, response) => {
-            response.should.have.status(200);
-            response.body.should.be.a('object');
-            response.body.should.have.property('message').eq('comment added successfuly');
+          response.should.have.status(200);
+          response.body.should.be.a("object");
+          response.body.should.have
+            .property("message")
+            .eq("comment added successfuly");
         });
     });
 
@@ -31,44 +33,70 @@ describe("Comment API", () => {
      *providing incorrect tokken
      */
     it("should not post a comment", () => {
-        const comment = {
-          name: "joshnson",
-          email: "josh@gmail.com",
-          comment: "here is my comment",
-        
-        };
-        const tokken =
-          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTg1MjE0MTksImV4cCI6MTU5ODYxNTAxOX0.wbMcRNcUuZqUYp-kgFvPE_ZRJWY41gjxBq1knmWUj_A";
+      const comment = {
+        name: "joshnson",
+        email: "josh@gmail.com",
+        comment: "here is my comment",
+      };
+      const tokken =
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTg1MjE0MTksImV4cCI6MTU5ODYxNTAxOX0.wbMcRNcUuZqUYp-kgFvPE_ZRJWY41gjxBq1knmWUj_A";
+      chai
+        .request(server)
+        .post("/api/comments")
+        .set({ Authorization: tokken })
+        .send(comment)
+        .end((err, response) => {
+          response.should.have.status(404);
+          response.body.should.be.a("object");
+          response.body.should.have
+            .property("message")
+            .eq("comment are related with a post");
+        });
+    });
+
+    it("should not post a comment", () => {
+      const comment = {
+        name: "joshnson",
+        email: "josh@gmail.com",
+        comment: "here is my comment",
+      };
+      const tokken =
+        "eyhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTg1MjE0MTksImV4cCI6MTU5ODYxNTAxOX0.wbMcRNcUuZqUYp-kgFvPE_ZRJWY41gjxBq1knmWUj_A";
+      chai
+        .request(server)
+        .post("/api/comments")
+        .set({ Authorization: tokken })
+        .send(comment)
+        .end((err, response) => {
+          response.should.have.status(401);
+          response.body.should.be.a("object");
+          response.body.should.have.property("error").eq("invalid token");
+        });
+    });
+  });
+
+  describe("Get comment", () => {
+    it("should get comment based on post id", () => {
+      const postId = "5f439be909f3c3c03e855cc5";
+      chai
+        .request(server)
+        .get("/api/comments/onpost")
+        .send(postId)
+        .end((err, response) => {
+            response.should.have.status(200);
+            response.body.should.be.a('array');
+        });
+    });
+    it("should not get comment", () => {
+        const postId = "f439be909f3c3c03e85cc5";
         chai
           .request(server)
-          .post("/api/comments")
-          .set({ Authorization: tokken })
-          .send(comment)
+          .get("/api/comments/onpost")
+          .send(postId)
           .end((err, response) => {
               response.should.have.status(404);
               response.body.should.be.a('object');
-              response.body.should.have.property('message').eq('comment are related with a post');
-          });
-      });
-
-      it("should not post a comment", () => {
-        const comment = {
-          name: "joshnson",
-          email: "josh@gmail.com",
-          comment: "here is my comment",
-        
-        };
-        const tokken =
-          "eyhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTg1MjE0MTksImV4cCI6MTU5ODYxNTAxOX0.wbMcRNcUuZqUYp-kgFvPE_ZRJWY41gjxBq1knmWUj_A";
-        chai
-          .request(server)
-          .post("/api/comments")
-          .set({ Authorization: tokken })
-          .send(comment)
-          .end((err, response) => {
-              response.should.have.status(401);
-              response.body.should.be.a('object');
-              response.body.should.have.property('error').eq('invalid token');
+              response.body.should.have.property('message').eq("no comment found");
           });
       });
   });

@@ -42,9 +42,10 @@ class Comments {
 
     async getCommentsByPost(req, res) {
         const comments=await Qry.find({post_id:req.body.postId});
-        console.log(comments)
-          if(!comments){
-            res.status(404).send({ message:'not comment found'}) 
+        console.log(comments.length)
+          if(comments.length==0){
+            res.status(404);
+            res.send({ message:'no comment found'}); 
           }else{
             res.status(200).send(comments);
           } 
