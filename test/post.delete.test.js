@@ -30,7 +30,7 @@ describe("DELETE post", () => {
     /**
      * Provide incollect id
      */
-    it("should Delete a post", () => {
+    it("should Not Delete a post", () => {
       let id = "5f46d02f6a086fa5422e723";
       const adminToken =
         "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTg1MjczODIsImV4cCI6MTU5ODYyMDk4Mn0.a78a3atupVg40smgWe0IMamJTdJ-s1YxMtDG7Gl7aJg";
