@@ -6,24 +6,24 @@ const should = chai.use(chaiHttp).should();
 describe("Posts API", () => {
   //get post
   describe("GET api/posts", () => {
-    it("should get all the posts", (done) => {
+    it("should get all the posts", () => {
       chai
         .request(server)
         .get("/api/posts")
         .end((err, response) => {
           response.should.have.status(200);
           response.body.should.be.a("array");
-          done();
+          
         });
     });
 
-    it("shouldn't get any post", (done) => {
+    it("shouldn't get any post", () => {
       chai
         .request(server)
         .get("/api/post")
         .end((err, response) => {
           response.should.have.status(404);
-          done();
+          
         });
     });
   });
@@ -35,7 +35,7 @@ describe("Posts API", () => {
     /*
      * providing correct post id
      */
-    it("should get post by id", (done) => {
+    it("should get post by id", () => {
       const id = "5f46c9c4b5512991dbd36352";
       chai
         .request(server)
@@ -47,14 +47,14 @@ describe("Posts API", () => {
           response.body.should.have.property("title");
           response.body.should.have.property("img");
           response.body.should.have.property("_id").eq(id);
-          done();
+          
         });
     });
 
     /*
      * providing wrong id
      */
-    it("shouldn't get any post", (done) => {
+    it("shouldn't get any post", () => {
       const id2 = "5f46c9c4b5512991dbd3635";
       chai
         .request(server)
@@ -63,7 +63,7 @@ describe("Posts API", () => {
           response.should.have.status(404);
           response.body.should.be.a("object");
           response.body.should.have.property("error").eq("Post doesn't exist!");
-          done();
+          
         });
     });
   });
@@ -75,7 +75,7 @@ describe("Posts API", () => {
     /*
      * providing correct routes and  correct info
      */
-    it("should post one post", (done) => {
+    it("should post one post", () => {
       let post = {
         title: "new title",
         content: "new content for testing",
@@ -97,7 +97,7 @@ describe("Posts API", () => {
             .eq("post created successfuly");
           response.body.should.have.property("data");
 
-          done();
+          
         });
     });
 
@@ -111,7 +111,7 @@ describe("Posts API", () => {
         img: "image location",
       };
       const token =
-        "ehbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTg0NzI3MTgsImV4cCI6MTU5ODQ5NDMxOH0.4Ae_SjDXmSA4-2BHbLybwjXkk6B-6TXSEAT8beKyLUE";
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTg1MjE0MTksImV4cCI6MTU5ODYxNTAxOX0.wbMcRNcUuZqUYp-kgFvPE_ZRJWY41gjxBq1knmWUj_A";
       chai
         .request(server)
         .post("/api/posts/")
@@ -215,7 +215,7 @@ describe("Posts API", () => {
         content: "new content for testing updated ",
         image: "image location updated",
       };
-      let id = "5f46e31d776c67d88e661817";
+      let id = "5f46c9c4b5512991dbd36352";
       const adminToken =
         "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTg1MjAyNDcsImV4cCI6MTU5ODYxMzg0N30.jOTouEUaWQ6rs_bKgMM6BgX2pc-J9Z0DPzGz0eaR-7w";
       chai
@@ -246,7 +246,7 @@ describe("Posts API", () => {
       };
       const id = "5f46e31d776c67d88e661817";
       const reguralToken =
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvQGdtYWlsLmNvbSIsImlzYWRtaW4iOmZhbHNlLCJpYXQiOjE1OTg0NzMwNTUsImV4cCI6MTU5ODQ5NDY1NX0.rfoMVxk3an2rZ0p9_oxYRRfXpYYkjwxpY6IAE3JMElI";
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvQGdtYWlsLmNvbSIsImlzYWRtaW4iOmZhbHNlLCJpYXQiOjE1OTg1MjY4MjAsImV4cCI6MTU5ODYyMDQyMH0.O3thjzSRZ9lYm8XLMiekilkZCqoaJji5Pl5yvhi6rNY";
       chai
         .request(server)
         .patch("/api/posts/" + id)
