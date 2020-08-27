@@ -10,8 +10,8 @@ POST http://localhost:5000/api/users/signin
 Content-Type: application/json
 
 {
-    "email": "hello@gmail.com", 
-    "password": "password"
+    "email": "hello2@gmail.com", 
+    "password": "password2"
 }
 
 ###
@@ -76,7 +76,7 @@ GET  http://localhost:5000/api/comments/onpost
 Content-Type: application/json
 
 {
-    "postId":"l"
+    "postId":"5f439be909f3c3c03e855cc"
 }
 
 ###
