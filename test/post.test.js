@@ -36,7 +36,7 @@ describe("Posts API", () => {
      * providing correct post id
      */
     it("should get post by id", (done) => {
-      const id = "5f46663fe7d2ce09d86aff84";
+      const id = "5f46c9c4b5512991dbd36352";
       chai
         .request(server)
         .get("/api/posts/" + id)
@@ -55,7 +55,7 @@ describe("Posts API", () => {
      * providing wrong id
      */
     it("shouldn't get any post", (done) => {
-      const id2 = "5f465e7eca4232f1c498e3";
+      const id2 = "5f46c9c4b5512991dbd3635";
       chai
         .request(server)
         .get("/api/posts/" + id2)
@@ -83,7 +83,7 @@ describe("Posts API", () => {
       };
 
       const adminToken =
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTg0NzI3MTgsImV4cCI6MTU5ODQ5NDMxOH0.4Ae_SjDXmSA4-2BHbLybwjXkk6B-6TXSEAT8beKyLUE";
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTg1MjAyNDcsImV4cCI6MTU5ODYxMzg0N30.jOTouEUaWQ6rs_bKgMM6BgX2pc-J9Z0DPzGz0eaR-7w";
       chai
         .request(server)
         .post("/api/posts/")
@@ -106,12 +106,12 @@ describe("Posts API", () => {
      */
     it("should not be able to post any post", (done) => {
       const post = {
-        title: "new title for testing",
+        title: "new times roman",
         content: "new content for testing",
         img: "image location",
       };
       const token =
-        "eJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTg0NzI3MTgsImV4cCI6MTU5ODQ5NDMxOH0.4Ae_SjDXmSA4-2BHbLybwjXkk6B-6TXSEAT8beKyLUE";
+        "ehbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTg0NzI3MTgsImV4cCI6MTU5ODQ5NDMxOH0.4Ae_SjDXmSA4-2BHbLybwjXkk6B-6TXSEAT8beKyLUE";
       chai
         .request(server)
         .post("/api/posts/")
@@ -161,7 +161,7 @@ describe("Posts API", () => {
         content: "",
       };
       const adminToken =
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTg0NzI3MTgsImV4cCI6MTU5ODQ5NDMxOH0.4Ae_SjDXmSA4-2BHbLybwjXkk6B-6TXSEAT8beKyLUE";
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTg1MjAyNDcsImV4cCI6MTU5ODYxMzg0N30.jOTouEUaWQ6rs_bKgMM6BgX2pc-J9Z0DPzGz0eaR-7w";
       chai
         .request(server)
         .post("/api/posts/")
@@ -185,7 +185,7 @@ describe("Posts API", () => {
         title: "new title for testing",
       };
       const adminToken =
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTg0NzI3MTgsImV4cCI6MTU5ODQ5NDMxOH0.4Ae_SjDXmSA4-2BHbLybwjXkk6B-6TXSEAT8beKyLUE";
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTg1MjAyNDcsImV4cCI6MTU5ODYxMzg0N30.jOTouEUaWQ6rs_bKgMM6BgX2pc-J9Z0DPzGz0eaR-7w";
       chai
         .request(server)
         .post("/api/posts/")
@@ -215,9 +215,9 @@ describe("Posts API", () => {
         content: "new content for testing updated ",
         image: "image location updated",
       };
-      let id = "5f46663fe7d2ce09d86aff84";
+      let id = "5f46e31d776c67d88e661817";
       const adminToken =
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTg0NzI3MTgsImV4cCI6MTU5ODQ5NDMxOH0.4Ae_SjDXmSA4-2BHbLybwjXkk6B-6TXSEAT8beKyLUE";
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTg1MjAyNDcsImV4cCI6MTU5ODYxMzg0N30.jOTouEUaWQ6rs_bKgMM6BgX2pc-J9Z0DPzGz0eaR-7w";
       chai
         .request(server)
         .patch("/api/posts/" + id)
@@ -244,7 +244,7 @@ describe("Posts API", () => {
         content: "new content for testing up",
         image: "image location",
       };
-      const id = "5f46663fe7d2ce09d86aff84";
+      const id = "5f46e31d776c67d88e661817";
       const reguralToken =
         "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvQGdtYWlsLmNvbSIsImlzYWRtaW4iOmZhbHNlLCJpYXQiOjE1OTg0NzMwNTUsImV4cCI6MTU5ODQ5NDY1NX0.rfoMVxk3an2rZ0p9_oxYRRfXpYYkjwxpY6IAE3JMElI";
       chai
@@ -271,9 +271,9 @@ describe("Posts API", () => {
         content: "new content for testing update",
         image: "image location",
       };
-      const id = "5465e7eca4232f1c498e3a3";
+      const id = "5f46e31d776c67d88e66181";
       const adminToken =
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTg0NzI3MTgsImV4cCI6MTU5ODQ5NDMxOH0.4Ae_SjDXmSA4-2BHbLybwjXkk6B-6TXSEAT8beKyLUE";
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTg1MjAyNDcsImV4cCI6MTU5ODYxMzg0N30.jOTouEUaWQ6rs_bKgMM6BgX2pc-J9Z0DPzGz0eaR-7w";
       chai
         .request(server)
         .patch("/api/posts/" + id)
@@ -296,9 +296,9 @@ describe("Posts API", () => {
      * Provide collect id
      */
     it("should Delete a post", (done) => {
-      let id = "5f46663fe7d2ce09d86aff84";
+      let id = "5f46e487950eeddbb9695fbc";
       const adminToken =
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTg0NzI3MTgsImV4cCI6MTU5ODQ5NDMxOH0.4Ae_SjDXmSA4-2BHbLybwjXkk6B-6TXSEAT8beKyLUE";
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTg1MjAyNDcsImV4cCI6MTU5ODYxMzg0N30.jOTouEUaWQ6rs_bKgMM6BgX2pc-J9Z0DPzGz0eaR-7w";
       chai
         .request(server)
         .delete("/api/posts/" + id)
@@ -316,9 +316,9 @@ describe("Posts API", () => {
      * Provide incollect id
      */
     it("should Delete a post", (done) => {
-      let id = "5f46663fe7d2ce09d86aff84";
+      let id = "5f46e487950eeddbb9695fb";
       const adminToken =
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTg0NzI3MTgsImV4cCI6MTU5ODQ5NDMxOH0.4Ae_SjDXmSA4-2BHbLybwjXkk6B-6TXSEAT8beKyLUE";
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTg1MjAyNDcsImV4cCI6MTU5ODYxMzg0N30.jOTouEUaWQ6rs_bKgMM6BgX2pc-J9Z0DPzGz0eaR-7w";
       chai
         .request(server)
         .delete("/api/posts/" + id)
