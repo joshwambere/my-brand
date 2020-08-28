@@ -29,15 +29,19 @@ app.get("/", (req, res) => {
 const swaggerOptions={
   swaggerDefinition:{
     info:{
-      title:"my brand Express API",
-      description:"This is the api which will be used in the protofolio website",
+      version: "1.0.0",
+      title:"My brand Express API",
+      description:"The API below are the api which will be used in the protofolio website",
       contact:{
-        name:"Johnson Dusabe"
+        name:"Johnson Dusabe",
+        email:'johnsondusabe@gmail.com'
       },
-      servers:['http://localhost:5000/']
-    }
+      servers:[`http://localhost:${PORT}`], 
+    },
+    basePath: "/api",
   },
-  apis:['./swagger.yaml']
+  
+  apis:['./swagger.yml']
 };
 const swaggerDocs=swaggerJsDoc(swaggerOptions);
 app.use('/api/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
