@@ -1,0 +1,219 @@
+---
+paths:
+  /posts:
+    get:
+      tags:
+        - Articles
+      summary: Return all the articles if they are available
+      description: use get request to get all the article available in DB
+      responses:
+        '200':
+          description: successful request
+        '404':
+          description: Post not found
+    post:
+      tags:
+        - Articles
+      summary: Add a new article
+      description: post request to add an article
+      responses:
+        '201':
+          description: successful request
+        '401':
+          description: Unauthorized access
+      parameters:
+        - name: authorization
+          in: header
+        - name: body
+          in: body
+          required: true
+          type: object
+          schema:
+            $ref: '#/definitions/postAddItem'
+  '/posts/{id}':
+    get:
+      tags:
+        - Articles
+      summary: Return one article corresponding to Provided ID
+      description: use get request to get specific post using id
+      responses:
+        '200':
+          description: successful request
+        '404':
+          description: Post not found
+      parameters:
+        - name: id
+          in: path
+          required: true
+    patch:
+      tags:
+        - Articles
+      summary: Update one article corresponding to Provided ID
+      description: Update an existing article
+      responses:
+        '201':
+          description: successful request
+        '401':
+          description: Unauthorized access
+        '404':
+          description: Post not found
+      parameters:
+        - name: id
+          in: path
+        - name: authorization
+          in: header
+        - name: body
+          in: body
+          required: true
+          type: object
+    delete:
+      tags:
+        - Articles
+      summary: Delete one article based on Its ID
+      description: Delete an existing article
+      responses:
+        '200':
+          description: post deleted
+        '401':
+          description: Unauthorized access
+        '404':
+          description: Post not found
+      parameters:
+        - name: id
+          in: path
+        - name: authorization
+          in: header
+  /comments:
+    get:
+      tags:
+        - Comments
+      summary: Get all the comment on any post all at once
+      description: use get request to get all the comments
+      responses:
+        '200':
+          description: successful request
+        '404':
+          description: no comment available
+    post:
+      tags:
+        - Comments
+      summary: Add a comment on existing article
+      description: Add a comment on existing article
+      responses:
+        '201':
+          description: successful request
+        '401':
+          description: Unauthorized access
+        '404':
+          description: no Post with such ID found
+      parameters:
+        - name: authorization
+          in: header
+        - name: body
+          in: body
+          required: true
+          type: object
+          schema:
+            $ref: '#/definitions/commentItem'
+  /comments/onpost:
+    get:
+      tags:
+        - Comments
+      summary: Get all the comments on One specified Article
+      description: use get request to get comments on certain post
+      responses:
+        '200':
+          description: successful request
+        '404':
+          description: no comment available for this post
+      parameters:
+        - name: body
+          in: body
+          required: true
+          type: object
+  /mail:
+    post:
+      tags:
+        - Mail
+      summary: Send e-mail
+      description: use post request to send email
+      responses:
+        '200':
+          description: successful request
+        '404':
+          description: no comment available for this post
+      parameters:
+        - name: body
+          in: body
+          required: true
+          type: object
+          schema:
+            $ref: '#/definitions/mailItem'
+  /users/signin:
+    post:
+      tags:
+        - Users
+      summary: Sign in a user and return a token which is used in other auth activities
+      description: use post request to sign in
+      responses:
+        '200':
+          description: successful request
+        '404':
+          description: incorrect email/post
+      parameters:
+        - name: body
+          in: body
+          required: true
+          type: object
+          schema:
+            $ref: '#/definitions/userItem'
+  /users:
+    post:
+      tags:
+        - Users
+      summary: seed a new user
+      description: use post request to sign in
+      responses:
+        '200':
+          description: successfull request
+        '400':
+          description: duplicate email
+definitions:
+  postAddItem:
+    type: object
+    properties:
+      title:
+        type: string
+      content:
+        type: string
+      image:
+        type: string
+  commentItem:
+    type: object
+    properties:
+      name:
+        type: string
+      email:
+        type: string
+      postId:
+        type: string
+      comment:
+        type: string
+  mailItem:
+    type: object
+    properties:
+      name:
+        type: string
+      email:
+        type: string
+      subject:
+        type: string
+      message:
+        type: string
+  userItem:
+    type: object
+    properties:
+      email:
+        type: string
+      password:
+        type: string

@@ -5,7 +5,7 @@ class Contact {
         const contact = new Cont({
             name: req.body.name,
             email: req.body.email,
-            comment: req.body.comment,
+            message: req.body.message,
             subject:req.body.subject,
           });
           await contact.save();
