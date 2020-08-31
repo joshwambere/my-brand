@@ -20,7 +20,7 @@ describe("Add post", () => {
       };
 
       const adminToken =
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTg1MjczODIsImV4cCI6MTU5ODYyMDk4Mn0.a78a3atupVg40smgWe0IMamJTdJ-s1YxMtDG7Gl7aJg";
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTg4NjA5MTEsImV4cCI6MTU5ODk1NDUxMX0.a8y4oSxId-TcZYC7OtkrIf2Y4tQa0mZckAjgSGV7rdg";
       chai
         .request(server)
         .post("/api/posts/")
@@ -46,7 +46,7 @@ describe("Add post", () => {
         image: "image location",
       };
       const token =
-        "eyhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTg1MjE0MTksImV4cCI6MTU5ODYxNTAxOX0.wbMcRNcUuZqUYp-kgFvPE_ZRJWY41gjxBq1knmWUj_A";
+        "eJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTg4NjA5MTEsImV4cCI6MTU5ODk1NDUxMX0.a8y4oSxId-TcZYC7OtkrIf2Y4tQa0mZckAjgSGV7rdg";
       chai
         .request(server)
         .post("/api/posts/")
@@ -70,7 +70,7 @@ describe("Add post", () => {
         image: "image location",
       };
       const reguralToken =
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvQGdtYWlsLmNvbSIsImlzYWRtaW4iOmZhbHNlLCJpYXQiOjE1OTg1MjczNTAsImV4cCI6MTU5ODYyMDk1MH0.avhJkCaFlabBMbj0m1skSVfJR-1T4zvJMMJP15Tl6N0";
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvQGdtYWlsLmNvbSIsImlzYWRtaW4iOmZhbHNlLCJpYXQiOjE1OTg4NjEzMTMsImV4cCI6MTU5ODk1NDkxM30.orLS9PRLB1hd2WPs0dDJFfLTkAXgHIM8ueSXlj-gYoA";
       chai
         .request(server)
         .post("/api/posts/")
@@ -96,7 +96,7 @@ describe("Add post", () => {
         content: "",
       };
       const adminToken =
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTg1MjczODIsImV4cCI6MTU5ODYyMDk4Mn0.a78a3atupVg40smgWe0IMamJTdJ-s1YxMtDG7Gl7aJg";
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTg4NjA5MTEsImV4cCI6MTU5ODk1NDUxMX0.a8y4oSxId-TcZYC7OtkrIf2Y4tQa0mZckAjgSGV7rdg";
       chai
         .request(server)
         .post("/api/posts/")
@@ -120,7 +120,7 @@ describe("Add post", () => {
         title: "new title for testing",
       };
       const adminToken =
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTg1MjczODIsImV4cCI6MTU5ODYyMDk4Mn0.a78a3atupVg40smgWe0IMamJTdJ-s1YxMtDG7Gl7aJg";
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTg4NjA5MTEsImV4cCI6MTU5ODk1NDUxMX0.a8y4oSxId-TcZYC7OtkrIf2Y4tQa0mZckAjgSGV7rdg";
       chai
         .request(server)
         .post("/api/posts/")
