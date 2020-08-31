@@ -6,5 +6,7 @@ cache: npm
 install: 
   npm install
 
+ft-swagger-docs
 script:
   npm test
+
