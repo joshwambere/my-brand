@@ -19,7 +19,7 @@ describe("Update post", () => {
       };
       let id = "5f46cc4b9e48559902e87f1e";
       const adminToken =
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTg4NjA5MTEsImV4cCI6MTU5ODk1NDUxMX0.a8y4oSxId-TcZYC7OtkrIf2Y4tQa0mZckAjgSGV7rdg";
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTkxNDY2MjMsImV4cCI6MTU5OTI0MDIyM30.gbBl_nlHJ_znAQOOTl0qV5m2CpPj82Czj9rZsssOFmc";
       chai
         .request(server)
         .patch("/api/posts/" + id)
@@ -46,7 +46,7 @@ describe("Update post", () => {
       };
       const id = "5f46cc4b9e48559902e87f1e";
       const reguralToken =
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvQGdtYWlsLmNvbSIsImlzYWRtaW4iOmZhbHNlLCJpYXQiOjE1OTg4NjEzMTMsImV4cCI6MTU5ODk1NDkxM30.orLS9PRLB1hd2WPs0dDJFfLTkAXgHIM8ueSXlj-gYoA";
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvQGdtYWlsLmNvbSIsImlzYWRtaW4iOmZhbHNlLCJpYXQiOjE1OTkxNDY4MzIsImV4cCI6MTU5OTI0MDQzMn0.esuduBcYC3iNfb9zUxveoyg65g1DME4Ee5KwhPfq81M";
       chai
         .request(server)
         .patch("/api/posts/" + id)
@@ -73,7 +73,7 @@ describe("Update post", () => {
       };
       const id = "5f46cc4b9e48559902e87f1";
       const adminToken =
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTg4NjA5MTEsImV4cCI6MTU5ODk1NDUxMX0.a8y4oSxId-TcZYC7OtkrIf2Y4tQa0mZckAjgSGV7rdg";
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTkxNDY2MjMsImV4cCI6MTU5OTI0MDIyM30.gbBl_nlHJ_znAQOOTl0qV5m2CpPj82Czj9rZsssOFmc";
       chai
         .request(server)
         .patch("/api/posts/" + id)
