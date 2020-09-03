@@ -21,16 +21,17 @@ GET http://localhost:5000/api/posts
 ###
 POST http://localhost:5000/api/posts
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTgyNjM1NDQsImV4cCI6MTU5ODI2NzE0NH0.cFc9R1DnatI39mr2thLy8smk7Ng74eBtHfszhkja9ts
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTg0NzUyNDYsImV4cCI6MTU5ODU2ODg0Nn0.9iXLFCq56-6I2W1CIQqqiIIRcxr7SRliqe9nG9ibShE
 
 {
-    "title": "Post 4 ",
-    "content": "hello d louis  again",
+    "title":"josh",
+    "content": "hello kaka again",
     "image": "image locations"
+
 }
 
 ###
-GET http://localhost:5000/api/posts/5f3637ad3a73cf29e8ba520e
+GET http://localhost:5000/api/posts/5f45a6d465126b2085054f64
 
 
 ###
@@ -46,21 +47,21 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFp
 
 ###
 
-DELETE http://localhost:5000/api/posts/5f43986cac1a0bb791041edf
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTgyNjM1NDQsImV4cCI6MTU5ODI2NzE0NH0.cFc9R1DnatI39mr2thLy8smk7Ng74eBtHfszhkja9ts
+DELETE http://localhost:5000/api/posts/5f46245e4d624976735b4be3
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTg0NzUyNDYsImV4cCI6MTU5ODU2ODg0Nn0.9iXLFCq56-6I2W1CIQqqiIIRcxr7SRliqe9nG9ibShE
 
 ###
 
 POST http://localhost:5000/api/comments
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvMkBnbWFpbC5jb20iLCJpc2FkbWluIjp0cnVlLCJpYXQiOjE1OTgyNjM1NDQsImV4cCI6MTU5ODI2NzE0NH0.cFc9R1DnatI39mr2thLy8smk7Ng74eBtHfszhkja9ts
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvQGdtYWlsLmNvbSIsImlzYWRtaW4iOmZhbHNlLCJpYXQiOjE1OTg1MjE5ODYsImV4cCI6MTU5ODYxNTU4Nn0.TRtiDJvjn9lcMrNNJ7rujdMZcEZv53Mv5oUyimJHKgg
 
 
 {
     "name": "johnson",
     "email": "jo@gmail.com",
     "comment": "thx this blog is awesome",
-    "postId":"5f439be909f3c3c03e855cc5"
+    "postId":"5f46e31d776c67d88e661817"
 }
 
 ###
@@ -75,7 +76,7 @@ GET  http://localhost:5000/api/comments/onpost
 Content-Type: application/json
 
 {
-    "postId":"5f439be909f3c3c03e855cc5"
+    "postId":"5f439be909f3c3c03e855cc"
 }
 
 ###

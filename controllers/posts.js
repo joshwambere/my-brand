@@ -18,8 +18,26 @@ class MyPosts {
       img: req.body.image,
       date: new Date(),
     });
-    await post.save();
-    res.send(post);
+    if (
+      post.title === "" ||
+      post.content === "" ||
+      post.img === "" ||
+      post.title == undefined ||
+      post.content == undefined ||
+      post.img == undefined
+    ) {
+      res.status(400).send({
+        status: "Bad",
+        message: "please fill in all the fields",
+      });
+    } else {
+      await post.save();
+      res.status(201).send({
+        message: "post created successfuly",
+        status: "Ok",
+        data: post,
+      });
+    }
   }
   async findOnePost(req, res) {
     try {
@@ -32,7 +50,7 @@ class MyPosts {
       }
     } catch (error) {
       res.status(404);
-      res.console({ error: error.message });
+      res.send({ error: "Post doesn't exist!" });
     }
   }
 
@@ -61,17 +79,13 @@ class MyPosts {
       res.send({ error: "Post doesn't exist!" });
     }
   }
+
   async deletePost(req, res) {
     try {
       const post = await Post.findOne({ _id: req.params.id });
       if (post) {
         await Post.deleteOne({ _id: req.params.id });
-        res
-          .send({
-            status: "Ok",
-            message: "post deleted successfuly",
-          })
-          .status(204);
+        res.send({message: "post deleted successfuly"});
       } else {
         res.status(404);
         res.send({ error: "Post doesn't exist!" });

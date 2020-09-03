@@ -5,9 +5,9 @@ const User = require('../models/User');
 class Users {
     async signUp(req, res) {
         const user = new User({
-            email: 'hello2@gmail.com',
-            password: 'password2',
-            isadmin: true,
+            email: 'hello@gmail.com',
+            password: 'password',
+            isadmin: false,
           });
           try {
             await user.save();
@@ -27,7 +27,7 @@ class Users {
               email: userFound.email,
               isadmin: userFound.isadmin,
             };
-            const token = jwt.sign(data, 'johnson', { expiresIn: '1h' });
+            const token = jwt.sign(data, 'johnson', { expiresIn: '26h' });
             return res.status(200).json({
               status: 200,
               message: 'User signed in successfully',
