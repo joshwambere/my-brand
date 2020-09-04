@@ -10,8 +10,8 @@ POST http://localhost:5000/api/users/signin
 Content-Type: application/json
 
 {
-    "email": "hello2@gmail.com", 
-    "password": "password2"
+    "email": "hello@gmail.com", 
+    "password": "password"
 }
 
 ###
